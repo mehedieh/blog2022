@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Design Stories : Gravity"
-date:   2016-03-30 19:45:31 +0530
-categories: ["design", "science", "life"]
+title:  "Language Modelling"
+date:   2017-07-01 01:00:00 +0530
+categories: cs
 author: "Nilay Shrivastava"
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
