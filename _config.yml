@@ -14,6 +14,7 @@ url: "http://euler16.github.io" # the base hostname & protocol for your site
 twitter_username: NilayShri
 github_username:  euler16
 facebook_username: nilay.shrivastava.1729
+linkedin_username: nilayshrivastava1729
 paginate: 6
 
 gems: [jekyll-paginate, kramdown]

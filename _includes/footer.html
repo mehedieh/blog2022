@@ -12,7 +12,11 @@
             {% include icon-github.html username=site.github_username %}
           </li>
           {% endif %}
-          <li>Made with <i class="fa fa-heart"></i> on <a href="http://jekyllrb.com"><span style="color:black">{ { Jekyll } }</a></span></li>
+        {% if site.github_username %}
+          <li>
+            {% include icon-linkedin.html username=site.linkedin_username %}
+          </li>
+          {% endif %}
 
 
         </ul>
