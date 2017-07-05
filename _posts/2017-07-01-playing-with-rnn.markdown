@@ -118,7 +118,7 @@ The LSTM has similar but complex equations with more number of gates, but those 
 I trained RNNs on texts (taking one character at a time) to generate new text based on the training data.
 The amazing thing was that the RNN has no notion of words, sentences and punctuations (we are just feeding one character at a time), but after training it (surprisingly) was able to generate correct spellings and  sometimes meaningful sentences too. Keep in mind that RNN has **no** knowledge of natural language (It is just a collection of matrix operations!) all it does is trying to guess a pattern in input sequence. 
 
-At each time step the output vector actually gives a probability distribution over all possible characters. The character having maximum probability is chosen and fed as input to the next time step. The RNN I trained was actually was a multi-layered RNN (Many RNNs connected together). The RNNs were trained using on [ __Floydhub__ ](https://www.floydhub.com/)
+At each time step the output vector actually gives a probability distribution over all possible characters. The character having maximum probability is chosen and fed as input to the next time step. The RNN I trained was actually was a multi-layered RNN (Many RNNs connected together). The RNNs were trained on [ __Floydhub__ ](https://www.floydhub.com/)
 
 ## Special Relativity and RNN
 
