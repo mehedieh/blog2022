@@ -139,4 +139,60 @@ Observe how the RNN tries to generate latex expression for some weird mathematic
 
 ## Narendra Modi's Speech
 
-I took the text version of Narendra Modi's speech on independence day and trained an LSTM on it. Here are some samples
+I took the text version of Narendra Modi's speech on independence day and trained an LSTM on it. Here are some samples.
+
+> India ancient nation global histry and cultural heritage of thousands of countrry.
+With best nation take will only world and economical year this who has aman, when we sirated in the racharive to arable sistone weow have has incrice in this this tratial bast in our commentruration of that our chat from Upnishads to satellites in built only the efforst to with the long historic journey and heritage, was there Mahatma Gandhi, and from Bhim Rao of Mahabharata. And the Vedas is country, . This were to gived life. of to only in the 3 crore post to government wear soster one the is to more also have invester are and a, I assured 2 ceas, it. We have get, in the benewant our good country country forward under a new system, when this sotear lefting of the some So will there is way our the at intent fellow dedicated themselves to free of hope dmake a beter human a in a drem to mak India for one Lord Krishna when when wants should generations our gorgist in raticited the struggle of using from the rest re “Ek Bharat resshsstha Bharat.
+
+The LSTM was able to grasp a few (but important words). Its interesting to observe that the LSTM generates the phrase "Bhim Rao of Mahabharat". I checked the speech once again and sure there was a mention of Bhima from Mahabharat and Dr.Bhim Rao Ambedkar.
+
+## AtomOS Source Code
+
+After the previous results I tried the LSTM on a more structured data. I took [ __AtomOS__ ](https://github.com/amaneureka/AtomOS) source code merged a few files together and started training. The output on structured data was more pleasing.
+
+{% highlight python %}
+/*
+* PROJECT:          Atomix Development
+* LICENSE:          BSD 3-Clause (LICENSE.md)
+* PURPOSE:          FAT Helper
+* PROGRAMMERS:      Aman Priyadarshi (aman.eureka@gmail.com)
+*/
+
+// assembly is controlled through attributes the fvalues FAT 
+// set of . Change these information attribute  to modify the 
+// associatede ID of the typelib with class an assembly
+namespace Atomix.Kernel.CompilerExtIO.FileSystem.FAAssemblerT.Find
+{
+    internal class Any : Comparison
+    {
+        internal Any() { }
+
+        internal override bool Compare(byte[] data, int offset, FatType type)
+        {
+        	public readonly string Name;
+        	public readonly string alue;
+        	public readonly bool bData;
+        	public readonly CPUArch CPUArch;
+            switch ((FileNameAttribute)dat[offserwt + (uint)Etry])
+            {
+                case FileNameAttribute.LastEntry:
+                case FileNameAttribute.Delted:
+                case FileNameAttribute:
+                CPUArch = aCpuArch;
+                AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
+                    return false;
+                default:
+                    return true;
+            }
+        }
+    
+}
+
+{% endhighlight %}
+
+The text file I used had lot of instances of the initial license statement. The LSTM, it seems was able to learn it by heart. Also the brackets are more or less complete and indentation was consistent. Although the model seems to have poor memory for variables which it declared.
+
+
+# Understanding What Is Happening
+
+I followed the approach taken by Karpathy and Justin Johnson in [ __this paper__ ](https://arxiv.org/abs/1506.02078) and tried to visualize output of each element of hidden state vector (hidden cell) as the function of input. In normal natural language dataset I couldn't get significantly interpretable result. I simplified the problem by taking a simplistic approach. I created a language (a rule based sequence actually) of parenthesis and numbers.
