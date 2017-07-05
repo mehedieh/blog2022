@@ -22,4 +22,6 @@ Nothing except a bunch of matrix multiplication!!!.<br>
 Let's discuss a simple RNN (yes there are complicated ones too!).
 People have developed various visual representations of RNN, each having its own pros and cons but in my opinion the easiest way to understand RNNs is to look at the equations.
 
-\\[ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \\]
+<div>
+$$f(x) = \sum_{k=1}^{K}\alpha_{k}$$
+</div>
