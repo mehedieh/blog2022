@@ -29,7 +29,7 @@ $$y_t = softmax(V \cdot h_t)$$
 Where,
 <ul>
 <li> \(h_t \in \mathbb{R}^{D_h}\) . \(h_t\) is called the hidden state of the RNN (it is a vector). Here \(D_h\) is the dimension of hidden state vector (something you are free to chose while creating an RNN). It must be kept in mind that a fresh hidden state vector is calculated after every timestep and fed back again in the next time step. (see the first equation)</li>
-<li> \(x_t \in \mathbb{R}^{d}\) where $d$ is dimension of input vector. The input to the RNN is in form of a vector. This vector might represent anything, it can be words, characters etc. Basically it will represent the discrete unit of input. </li>
+<li> \(x_t \in \mathbb{R}^{d}\) where \(d\) is dimension of input vector. The input to the RNN is in form of a vector. This vector might represent anything, it can be words, characters etc. Basically it will represent the discrete unit of input. </li>
 <li> \(h_{t-1} \in \mathbb{R}^{D_h}\). In the equations given above this represents the hidden state vector computed after the previous time step.</li>
 <li> \(U \in \mathbb{R}^{D_h \times d}\). This is the weight matrix applied to the input vector \(x_t\)
  (see the equations).</li>
@@ -113,7 +113,7 @@ The interesting part of these equations is the introduction of vectors \(z_t\) a
 The LSTM has similar but complex equations with more number of gates, but those gates essentially have the same task as GRU gates.
 
 
-# The **Fun** part
+# The Fun part
 
 I trained RNNs on texts (taking one character at a time) to generate new text based on the training data.
 The amazing thing was that the RNN has no notion of words, sentences and punctuations (we are just feeding one character at a time), but after training it (surprisingly) was able to generate correct spellings and  sometimes meaningful sentences too. Keep in mind that RNN has **no** knowledge of natural language (It is just a collection of matrix operations!) all it does is trying to guess a pattern in input sequence. 
