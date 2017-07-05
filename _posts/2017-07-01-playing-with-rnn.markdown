@@ -10,7 +10,7 @@ Recurrent Neural Networks are amusing. They are amongst the finest examples of h
 > In this post we will learn about RNNs, use them to generate text and visualise its working.
 
 I assume that you have a basic understanding about simple Neural Networks, matrices and matrix multiplication. Even if you don't, feel free to jump over to fun part of the post where we trained an RNN to
-talk about Special Relativity, prepare a speech in the style of Indian Prime Minister Narendra Modi and whatsapp messages.
+talk about Special Relativity, prepare a speech in the style of Indian Prime Minister Narendra Modi and create some C# code.
 
 The code for this post is available [ __here__ ](https://github.com/euler16/CharRNN). 
 
@@ -85,8 +85,6 @@ for t in range(timesteps):
 
 Take time to digest it. It is perfectly fine if you can't. Come back to it later but make sure you do because the beauty of RNNs (like other Machine Learning models/algorithms) lies in their characteristic equations.
 
-> "Read Euler, Read Euler, he is the master of us all"
->                                                     - #RandomQuotewithNoMeaning
 
 # LSTMs and GRUs
 
@@ -148,7 +146,7 @@ The LSTM was able to grasp a few (but important words). Its interesting to obser
 
 ## AtomOS Source Code
 
-After the previous results I tried the LSTM on a more structured data. I took [ __AtomOS__ ](https://github.com/amaneureka/AtomOS) source code merged a few files together and started training. The output on structured data was more pleasing.
+After the previous results I tried the LSTM on a more structured data. I took [ __AtomOS__ ](https://github.com/amaneureka/AtomOS) source code merged a few files together and started training. AtomOS is an operating system written in C# (interesting isn't it? Do check out its repo).The output on structured data was more pleasing.
 
 {% highlight python %}
 /*
@@ -197,7 +195,7 @@ The text file I used had lot of instances of the initial license statement. The 
 
 I followed the approach taken by Karpathy and Justin Johnson in [ __this paper__ ](https://arxiv.org/abs/1506.02078) and tried to visualize output of each element of hidden state vector (hidden cell) as the function of input. In normal natural language dataset I couldn't get significantly interpretable result. I simplified the problem by using a more structured and context free language having short term dependencies The language (a rule based sequence actually) consists of only parenthesis and numbers and has the following grammar:-
 
-* The alphabet consists of [(, ), 1, 2, 3, 4 ] (separated by space)
+* The alphabet consists of **[ (, ), 1, 2, 3, 4 ]** (separated by space)
 * The maximum nesting level allowed is 4
 * Inside a nesting level, numbers are randomly placed inside but the number must indicate the nesting level.
 
@@ -227,10 +225,10 @@ With the above simple 'parenthesis language' as training data, I trained a 1-lay
 </script>
 
 
-One can see some hidden cells didn't capture any sequential relation at all (like Cell:2 and Cell:9).<br>
-But Cell:4 and Cell:12 easily reveal the pattern they capture.\\
-Cell:4 remains positive throughout the sequence but gives spikes of negative values just before observing a 4. In other words this cell keeps track of the final level of indentation.<br>
-Cell:12 gives an activation of about -0.7 whenever it encounters '(' in the sequence.
+One can see some hidden cells didn't capture any sequential relation at all (like cell-2 and cell-9).<br>
+But cell-4 and cell-12 easily reveal the pattern they capture.\\
+cell-4 remains positive throughout the sequence but gives spikes of negative values just before observing a 4. In other words this cell keeps track of the final level of indentation.<br>
+cell-12 gives an activation of about -0.7 whenever it encounters **(** in the sequence.
 
 These were the patterns that were easiest to spot in the heat map. The code for generating this visualisation is available [ __here__ ](https://github.com/euler16/CharRNN/tree/master/visualisation) along with the instructions on how to run it. If you observe any interesting pattern in this dataset (or any other) do share it with me.
 
@@ -248,6 +246,8 @@ While working on [ __CharRNN__ ](https://github.com/euler16/CharRNN), I experime
 * Using an embedding table and allowing the RNN to learn vector representation of the characters (code available in efficient folder)
 
 I found that the latter approach gives a better result. One problem that I faced with the first approach was that after a few hundred epochs the output mainly consisted of repeated character sequences.
+
+The interactive heatmap was generated using Bokeh Plotting Library.
 
 # Conclusion
 
