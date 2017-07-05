@@ -10,7 +10,7 @@ Recurrent Neural Networks are amusing. They are amongst the finest examples of h
 
 > In this post we will learn about RNNs, use them to generate text and visualise its working.
 
-I assume that you have a basic understanding about simple Neural Networks, matrices and matrix multiplication. Even if you don't, feel free to jump over to fun part of the post where we trained an RNN to
+I assume that you have a basic understanding about simple Neural Networks, matrices and matrix multiplication. Even if you don't, feel free to jump over to [fun section](#the-fun-part)of the post where we trained an RNN to
 talk about Special Relativity, prepare a speech in the style of Indian Prime Minister Narendra Modi and create some C# code.
 
 The code for this post is available [ __here__ ](https://github.com/euler16/CharRNN). 
