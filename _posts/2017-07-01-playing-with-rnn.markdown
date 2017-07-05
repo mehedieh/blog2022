@@ -195,9 +195,13 @@ The text file I used had lot of instances of the initial license statement. The 
 
 # Understanding What Is Happening
 
-I followed the approach taken by Karpathy and Justin Johnson in [ __this paper__ ](https://arxiv.org/abs/1506.02078) and tried to visualize output of each element of hidden state vector (hidden cell) as the function of input. In normal natural language dataset I couldn't get significantly interpretable result. I simplified the problem by using a more structured and context free language having short term dependencies The language (a rule based sequence actually) consists of only parenthesis and numbers and has the following rules:-
+I followed the approach taken by Karpathy and Justin Johnson in [ __this paper__ ](https://arxiv.org/abs/1506.02078) and tried to visualize output of each element of hidden state vector (hidden cell) as the function of input. In normal natural language dataset I couldn't get significantly interpretable result. I simplified the problem by using a more structured and context free language having short term dependencies The language (a rule based sequence actually) consists of only parenthesis and numbers and has the following grammar:-
 
+* The alphabet consists of [(, ), 1, 2, 3, 4 ] (separated by space)
+* The maximum nesting level allowed is 4
+* Inside a nesting level, numbers are randomly placed inside but the number must indicate the nesting level.
 
+With the above simple 'parenthesis language' as training data, I trained a 1-layer GRU having 15 hidden cells (hidden vector has 15 elements) and generated a heatmap showing their activation value. In the heatmap, orangeish cells represent values less than zero while the blueish cells represent values greater than zero. 
 
 <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.6.min.css" type="text/css" />
 <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.6.min.js"></script>
@@ -221,3 +225,46 @@ I followed the approach taken by Karpathy and Justin Johnson in [ __this paper__
           else document.addEventListener("DOMContentLoaded", fn);
         })();
 </script>
+
+
+One can see some hidden cells didn't capture any sequential relation at all (like Cell:2 and Cell:9).<br>
+But Cell:4 and Cell:12 easily reveal the pattern they capture.\\
+Cell:4 remains positive throughout the sequence but gives spikes of negative values just before observing a 4. In other words this cell keeps track of the final level of indentation.<br>
+Cell:12 gives an activation of about -0.7 whenever it encounters '(' in the sequence.
+
+These were the patterns that were easiest to spot in the heat map. The code for generating this visualisation is available [ __here__ ](https://github.com/euler16/CharRNN/tree/master/visualisation) along with the instructions on how to run it. If you observe any interesting pattern in this dataset (or any other) do share it with me.
+
+
+This clearly demonstrates that the 'magic' behind RNNs is the hidden state which tries to learn a representation of sequences.
+
+# Code
+
+I used PyTorch, my favourite Deep Learning framework for creating and training Recurrent Neural Nets. Even if you are not familiar with PyTorch do have a look at the code. I believe one of the greatest strengths of PyTorch is that its syntax is similar to native Python + Numpy code, making a PyTorch code more readable than any other DL Framework.
+
+While working on [ __CharRNN__ ](https://github.com/euler16/CharRNN), I experimented with the following approaches
+
+* Feeding one hot representation of characters directly into the RNN (code available in the simple folder of the repository)
+
+* Using an embedding table and allowing the RNN to learn vector representation of the characters (code available in efficient folder)
+
+I found that the latter approach gives a better result. One problem that I faced with the first approach was that after a few hundred epochs the output mainly consisted of repeated character sequences.
+
+# Conclusion
+
+> RNNs are Great! RNNs are Simple! RNNs are Fantastic!
+
+Recurrent Nets are powerful models for training on sequential input. The 2 most common forms of RNNs are LSTMs and GRUs. The secret mantra behind the power of RNN is its hidden state which captures sequential pattern. Practically RNNs are used with another 'trick' called Attention Mechanism. It is a concept that is loosely based on the attention mechanism found in humans.
+You can read about attention [ __here__ ](http://distill.pub/2016/augmented-rnns/) <br>
+
+On a personal note, this blog is my attempt to follow Albert Einstein's philosphy
+> If you can't explain it simply, you don't understand it well
+
+I am trying to be good at explaining things. I would really appreciate if you can give some constructive feedback about the post. Also feel free to ping me if there was something you couldn't understand or are facing some issues with the code. 
+
+
+# Resources
+* For Deep Learning, I think the best place to start is [ __Siraj Raval's videos__ ](https://www.youtube.com/channel/UCWN3xxRkmTPmbKwht9FuE5A). He is a great communicator. His videos contain simple explainations of many intricate concepts.
+
+* Christopher Olah's [ __blog__ ](https://colah.github.io): His blog is a treasure trove for Deep Learning. I am particularly fond of his diagrams.
+
+* Andrej Karpathy's [ __blog__ ](https://karpathy.github.io): This blog post (my first) was inspired by Karpathy's blog. 
