@@ -5,8 +5,7 @@ permalink: /about/
 ---
 <h2><center>Nilay Shrivastava</center></h2>
 <!-- [Nilay]({{site.baseurl}}/assets/image.jpg){:height="250em" style="float: left;margin-right: 20px;margin-top: 7px"} -->
-<p>I am currently a CS final year student at NSIT, University of Delhi. Broadly my interest lies in the domains of Mathematics, Physics and Computer Science.
-<br>In my spare time, I like to read about Modern Physics and AI. I am keenly interested in the theoretical foundations of AI.  I get super excited when I find that a certain concept native to one domain can solve a problem in some other unrelated domain. My dream is to be a part of the community of people working to solve intelligence.</p>
+I am currently a CS final year student at NSIT, University of Delhi. Broadly my interest lies in the domains of Mathematics, Physics and Computer Science. In my spare time, I like to read about Quanum Mechanics and AI. I am keenly interested in the theoretical foundations of AI.  I get super excited when I find that a certain concept native to one domain can solve a problem in some other unrelated domain. My dream is to be a part of the community of people working to solve intelligence.
 <br>
 <h3>Projects</h3>
 * [ __CharRNN__ ](https://github.com/euler16/CharRNN) :- character based language modelling written in PyTorch.
