@@ -3,7 +3,7 @@ layout: page
 title : About
 permalink: /about/
 ---
-<h2><center>Nilay Shrivastava?</center></h2>
+<h2><center>Nilay Shrivastava</center></h2>
 <!--  -->![Nilay]({{site.baseurl}}/assets/image.jpg){:height="250em" style="float: left;margin-right: 20px;margin-top: 7px"}
 <p>I am currently a CS final year student at NSIT, University of Delhi.
 <br>Broadly my interest lies in the domains of Mathematics, Physics and Computer Science.
