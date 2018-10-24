@@ -5,7 +5,7 @@ permalink: /about/
 ---
 <h2><center>Nilay Shrivastava</center></h2>
 <!-- [Nilay]({{site.baseurl}}/assets/image.jpg){:height="250em" style="float: left;margin-right: 20px;margin-top: 7px"} -->
-I am a final year undergraduate student of Computer Engineering department at Netaji Subhas Institute of Technology. My interests spans across Mathematics (specifically Stochastic Calculus), Deep Learning, Gradient free Optimization algorithms and Quantum Computing/Information Processing. During my undergraduate degree I managed to squeeze internships at a startup Zeg.ai and then at Samsung Research, Banglore where I worked on constructing Deep Nets for low power devices. At NSIT I worked in Dr. Vijander Singh's Control Engineering lab on Optimization problems. I am a KVPY and NTSE scholar too.
+I am a final year undergraduate student of Computer Engineering department at Netaji Subhas Institute of Technology. My interests spans across Mathematics (specifically Stochastic Calculus), Deep Learning, Gradient free Optimization algorithms and Quantum Computing/Information Processing. During my undergraduate degree I managed to squeeze internships at a startup Zeg.ai and then at Samsung Research, Banglore where I worked on constructing Deep Nets for low power devices. At NSIT I worked in Dr. Vijander Singh's Control Engineering lab on Optimization problems. I am a [KVPY](https://en.wikipedia.org/wiki/Kishore_Vaigyanik_Protsahan_Yojana) and [NTSE](https://en.wikipedia.org/wiki/National_Talent_Search_Examination) scholar too.
 
 Apart from mainstream academic work, I maintain this blog. I have also built a JavaScript library Qu.js (do ![check it out](https://github.com/euler16/Qu.js)!).
 <br>
