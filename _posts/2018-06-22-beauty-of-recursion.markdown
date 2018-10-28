@@ -14,24 +14,26 @@ In this sense this post is more of a showcase/gallery than an educational blog.
 <script src="../../../../js/p5.min.js"></script>
 <script src="../../../../js/p5.dom.min.js"></script>
 # Fractal Trees
-This is the most common example of fractals.Notice how each part of the system is constructed recursively. Use the slider to generate more patters
+This is the most common example of fractals.Notice how each part of the system is constructed recursively. Use the slider to generate more patterns
 
 <center><div id="tree" style="position: relative;"></div></center>
 
 # Making things more natural: Stochastic Trees
 Although the tree patterns were beautiful, they were too symmetric to be natural. Below is an example of __naturalness__ can be embedded by combining randomness with recursion. The underlying algorithm doesn't traverse all children in the recursion tree everytime, rather it choses the recursion branch randomly.
 To make it more natural I also added the effect of __wind__ on our swaying tree.
-<center><div id="swayingtree"></div><center>
+<center><div id="swayingtree" style="position: relative;"></div></center>
 
-Test it test it
 > On older sytems the visualisation might be slow
 
 # Using L-Systems
 
-Although the tree patterns were beautiful, they were too symmetric to be natural. Below is an example of __naturalness__ can be embedded by combining randomness with recursion. The underlying algorithm doesn't traverse all children in the recursion tree everytime, rather it choses the recursion branch randomly.
-To make it more natural I also added the effect of __wind__ on our swaying tree.
-<center><div id="L1" style='position: relative;'></div></center>
+Another common technique for generating beautiful patterns is by using Lindenmayer system or L-System for short. It is a grammar (yes those same grammars that we study in Theory of Computation) having a set of production rules. They were invented to describe the structural growth of plants. To know more about L-Systems read [The Algorithmic Beauty of Plants](http://algorithmicbotany.org/papers/abop/abop.pdf). L-Systems deserve a blog post of their own and I plan to write one as soon as I find time. Meanwhile enjoy recreating plant growth by clicking generate button!
+<center><div id="L1" style="position: relative;"></div></center>
 Ain't it beautiful?
+
+# Conclusion
+This is the most haphazard blog I have ever written. Paradoxically, this post took around five months to complete!! Thanks to internships, tests and unplanned undergrad life. My motivation behind this post was to indulge in and showcase something which I love to call __computational art__ . I would encourage you to experiment with recursion and create more such pieces of art. For code, checkout the github repostory of this [blog](https://github.com/euler16/euler16.github.io/tree/master/_posts).
+
 
 <script type="text/javascript">
 let width = 400;
@@ -216,7 +218,7 @@ function ltree(p) {
         //createP(axiom);
         p.turtle();
         let button = p.createButton("generate");
-        button.position(900,2000)
+        button.position(900,2200)
         button.mousePressed(p.generate);
     };
 }
@@ -226,7 +228,7 @@ const lsystem = new p5(ltree);
 
 
 
-{% if page.comments %}
+<!-- {% if page.comments %}
 <div id="disqus_thread"></div>
 <script>
 
@@ -247,4 +249,4 @@ s.setAttribute('data-timestamp', +new Date());
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-{% endif %}
+{% endif %} -->
