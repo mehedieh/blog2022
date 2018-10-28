@@ -16,7 +16,7 @@ In this sense this post is more of a showcase/gallery than an educational blog.
 # Fractal Trees
 This is the most common example of fractals.Notice how each part of the system is constructed recursively. Use the slider to generate more patters
 
-<center><div id="tree"></div></center>
+<center><div id="tree" style="position: relative;"></div></center>
 
 # Making things more natural approach: Stochastic Trees
 Although the tree patterns were beautiful, they were too symmetric to be natural. Below is an example of __naturalness__ can be embedded by combining randomness with recursion. The underlying algorithm doesn't traverse all children in the recursion tree everytime, rather it choses the recursion branch randomly.
@@ -47,7 +47,13 @@ function tree(p) {
         canvas.parent("tree");
 
         slider = p.createSlider(0, TWO_PI, TWO_PI);
-        slider.position((p.width/2) - 100,p.height+20);
+        //const sliderX = (p.width  - slider.width  >> 1) + canvas.x,
+        //  sliderY = (p.height - slider.height >> 1) + canvas.y;
+        //slider.position(sliderX, sliderY);
+        //slider.position(canvas.x,canvas.y);
+        
+        slider.position((p.width/2) + 350,p.height+550);
+
     };
 
     p.draw = () => {
