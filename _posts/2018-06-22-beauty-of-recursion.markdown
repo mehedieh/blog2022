@@ -18,16 +18,20 @@ This is the most common example of fractals.Notice how each part of the system i
 
 <center><div id="tree" style="position: relative;"></div></center>
 
-# Making things more natural approach: Stochastic Trees
+# Making things more natural: Stochastic Trees
 Although the tree patterns were beautiful, they were too symmetric to be natural. Below is an example of __naturalness__ can be embedded by combining randomness with recursion. The underlying algorithm doesn't traverse all children in the recursion tree everytime, rather it choses the recursion branch randomly.
 To make it more natural I also added the effect of __wind__ on our swaying tree.
-
-
 <center><div id="swayingtree"></div><center>
 
-# A more general approach: Using L-Systems
+Test it test it
+> On older sytems the visualisation might be slow
 
-<center><div id="L1"></div></center>
+# Using L-Systems
+
+Although the tree patterns were beautiful, they were too symmetric to be natural. Below is an example of __naturalness__ can be embedded by combining randomness with recursion. The underlying algorithm doesn't traverse all children in the recursion tree everytime, rather it choses the recursion branch randomly.
+To make it more natural I also added the effect of __wind__ on our swaying tree.
+<center><div id="L1" style='position: relative;'></div></center>
+Ain't it beautiful?
 
 <script type="text/javascript">
 let width = 400;
@@ -47,11 +51,7 @@ function tree(p) {
         canvas.parent("tree");
 
         slider = p.createSlider(0, TWO_PI, TWO_PI);
-        //const sliderX = (p.width  - slider.width  >> 1) + canvas.x,
-        //  sliderY = (p.height - slider.height >> 1) + canvas.y;
-        //slider.position(sliderX, sliderY);
-        //slider.position(canvas.x,canvas.y);
-        
+        // hack!!
         slider.position((p.width/2) + 350,p.height+550);
 
     };
@@ -140,7 +140,91 @@ function swaying(p) {
     };
 }
 const swayingTree = new p5(swaying);
+
+function ltree(p) {
+    let angle;
+    let axiom = "X";
+    let sentence = axiom;
+    let len = 150;
+
+    let width = 400;
+    let height = 400;
+    let rules = [];
+    let canvas;
+
+    rules[0] = {
+        a: 'F',
+        b: 'FF'
+    };
+
+    rules[1] = {
+        a: 'X',
+        b: 'F-[[X]+X]+F[+FX]-X'
+    };
+
+    p.generate = () => {
+        len *= 0.5;
+        let nextSentence = "";
+
+        for (let i = 0; i < sentence.length; i++) {
+            let current = sentence.charAt(i);
+            let found = false;
+            for (let j = 0; j < rules.length; j++) {
+                if (current == rules[j].a) {
+                    found = true;
+                    nextSentence += rules[j].b;
+                    break;
+                }
+            }
+            if (!found) {
+                nextSentence += current;
+            }
+        }
+        sentence = nextSentence;
+        //createP(sentence);
+        p.turtle();
+    };
+
+    p.turtle = () => {
+        p.background(51);
+        p.resetMatrix();
+        p.translate(width / 2, height);
+        p.stroke(255, 100);
+        for (let i = 0; i < sentence.length; i++) {
+            let current = sentence.charAt(i);
+
+            if (current == "F") {
+                p.line(0, 0, 0, len);
+                p.translate(0, -len);
+            } else if (current == "+") {
+                p.rotate(-angle);
+            } else if (current == "-") {
+                p.rotate(angle)
+            } else if (current == "[") {
+                p.push();
+            } else if (current == "]") {
+                p.pop();
+            }
+        }
+    }
+
+    p.setup = () => {
+        canvas = p.createCanvas(width, height);
+        canvas.parent("L1");
+        angle = p.radians(25);
+        p.background(51);
+        //createP(axiom);
+        p.turtle();
+        let button = p.createButton("generate");
+        button.position(900,2000)
+        button.mousePressed(p.generate);
+    };
+}
+
+const lsystem = new p5(ltree);
 </script>
+
+
 
 {% if page.comments %}
 <div id="disqus_thread"></div>
