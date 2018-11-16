@@ -18,7 +18,7 @@ facebook_username: nilay.shrivastava.1729
 linkedin_username: nilayshrivastava1729
 paginate: 6
 
-plugins: [jekyll-paginate, kramdown, jekyll-seo-tag]
+plugins: [jekyll-paginate, kramdown, jekyll-seo-tag, jekyll-sitemap]
 # Build settings
 markdown: kramdown
 highlighter: rouge
