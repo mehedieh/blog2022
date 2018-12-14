@@ -229,5 +229,6 @@ let dp = new p5(doublePendulum);
 * [ __Face-Recognizer__ ](https://github.com/euler16/Face-Recognizer) : Face Recognition using Principal Component Analysis.
 <br>
 
-<h3> Research Papers </h3>
-* 
+<h3> Research Work </h3>
+* Gupta, R., Shrivastava, N., Jain, M., Singh, V. and Rani, A., 2018, April. Greedy WOA for Travelling Salesman Problem. In International Conference on Advances in Computing and Data Sciences (pp. 321-330). Springer, Singapore.
+
