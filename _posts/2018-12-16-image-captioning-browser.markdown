@@ -20,9 +20,18 @@ To run the demo, click [here](https://euler16.github.io/demos/image-captioning/)
 
 The aim of this post is not to provide a full tutorial on Image Captioning. For that I would encourage you to go through Andrej Karpathy's [presentation](https://www.youtube.com/watch?v=yk6XDFm3J2c) and Google's Show and Tell [paper](https://arxiv.org/pdf/1609.06647.pdf).
 
+This post documents my approach for implementing a captioning model for browser using Tensorflow.js
+
 Since automatically describing the content of a picture connects both Computer Vision and Natural Language Processing...
 
 ## Dataset Used
+
+Most state-of-the-art neural architectures have been trained using __Microsoft Common Objects in Context__ ([MSCOCO](http://cocodataset.org/#home)) dataset. The dataset weighs around 25GB and contains more than 200k images across 80 object categories having 5 captions per image. Since I am an undergrad I don't have access to computational power to process such a huge dataset.
+
+Therefore I used __Flickr8k__ [Dataset]() provided by University of Illinois Urbana-Champaign. The dataset is 1GB large and consists of 8k images each having 5 captions. Due to its relatively small size I could easily use Flickr8k with Google Colab notebooks.
+
+## Model Architecture
+
 
 ## Feature Extraction from Image: MobileNets
 
@@ -33,6 +42,8 @@ Since automatically describing the content of a picture connects both Computer V
 ## Caption Generation in Browser
 
 ## Issues faced
+
+The primary issue 
 
 ## Complete Code
 
