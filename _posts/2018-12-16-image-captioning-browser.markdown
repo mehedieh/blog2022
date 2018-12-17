@@ -53,16 +53,37 @@ To generate captions, Long Short Term Memory (LSTM) layers were used. LSTM based
 
 ## Skeleton Code for the Model and Model Summary
 
-{% highlight python %}
-x = 10
-for i in range(10):
-    x += 10
+<img src="{{site.baseurl}}/assets/image-captioning/code_modules.png">
 
+The above image shows the code structure of the architecture. MobileNet as described above will be used to output a 1000 dimensional represantation of input image. We take this representation and insert into the image model which contains a Keras layer called RepeatVector that will essentially create copies to be fed into every time-step of the LSTM language model as discussed above
+{% highlight python %}
+image_inp = Input(shape=(1000,)) # input from MobileNet
+image_model = Dense(embedding_size,input_shape=(1000,),activation='relu')(image_inp)
+image_model = RepeatVector(max_len)(image_model)
 {% endhighlight %}
+
+The caption model will be built from the Embedding lookup and a TimeDistributed Dense Layer
+
+{% highlight python %}
+caption_inp = Input(shape=(max_len,))
+caption_model = Embedding(vocab_size,embedding_size,input_length=max_len)(caption_inp)
+caption_model = LSTM(128,return_sequence=True)(caption_model)
+caption_model = TimeDistributed(Dense(64))(caption_model)
+{% endhighlight %}
+
+Finally both modules are merged in the following way
+{% highlight python %}
+merge_model = Concatenate(axis=1)([image_model, caption_model])
+merge_model = Bidirectional(LSTM(128,return_sequences=False))(merge_model)
+merge_model = Dense(vocab_size)(merge_model)
+{% endhighlight %}
+
+The model obtained can be summarised as follows:
+<img src="{{site.baseurl}}/assets/image-captioning/summary.png">
 
 ## Caption Generation in Browser
 
-I used [TensorFlow.js](https://js.tensorflow.org) for browser demonstration (other alternatives like Onnxjs do exist and I plan to work on them in future). The feature extractor part, i.e. MobileNet was easily obtained as pretrained model from tfjs-models repo using the following code :
+I used [TensorFlow.js](https://js.tensorflow.org) for the browser demonstration (other alternatives like Onnxjs do exist and I plan to work on them in future). The feature extractor part, i.e. MobileNet was easily obtained as pretrained model from tfjs-models repo using the following code :
 {% highlight javascript%}
 const mobilenet = await tf.loadModel('https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json');
 
@@ -118,7 +139,9 @@ function caption(img) {
             if(wordPred=='<end>'||startWord.length>maxLen)
                 break;
         }
+        /* right now startWord contains <start> and <end>*/
 
+        // removing <start> and <end>
         startWord.shift();
         startWord.pop();
         
