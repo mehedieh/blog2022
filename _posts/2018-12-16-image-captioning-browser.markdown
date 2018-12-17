@@ -31,6 +31,13 @@ Most state-of-the-art neural architectures have been trained using __Microsoft C
 Therefore I used __Flickr8k__ [Dataset]() provided by University of Illinois Urbana-Champaign. The dataset is 1GB large and consists of 8k images each having 5 captions. Due to its relatively small size I could easily use Flickr8k with Google Colab notebooks.
 
 ## Model Architecture
+<img src="../../../../assets/image-captioning/image_cap_arch.png">
+
+As shown above the complete neural captioning architecture can be divided into two parts.
+1. __The Feature Extractor__ : which takes an image as input and outputs a low dimensional condensed repersentation of the image.
+2. __The Language Model__ : which takes the condensed representation and a special __START__ token and generates a caption.
+
+We stop the caption generation process when the language model emits an __END__ token or the length of the caption increases a threshold. In the demo, this threshold has been set to 40 which is the maximum length of captions in Flickr8k dataset.
 
 
 ## Feature Extraction from Image: MobileNets
