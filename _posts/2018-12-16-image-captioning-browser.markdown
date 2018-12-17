@@ -10,7 +10,7 @@ The holy grail of Computer Science and Artificial Intelligence research is to de
 
 ## TLDR; Demo
 
-To run the demo, click [here](https://euler16.github.io/demos/image-captioning/).
+To run the demo, click [here]({{site.baseurl}}/demos/image-captioning/).
 For the code, click [here](https://github.com/euler16/Image-Captioning).
 
 > Deploying deep learning models on web is challenging since web imposes size constraints. This forced me to reduce number of parameters of the model substantially which in turn decreased accuracy. So the captions may sometimes be wayward. 
