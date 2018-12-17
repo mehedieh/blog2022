@@ -6,8 +6,29 @@ categories: cs
 author: "Nilay Shrivastava"
 comments: true
 ---
-Automatically
+The holy grail of Computer Science and Artificial Intelligence research is to develop programmes that can combine knowledge/information from multiple domains to perform actions that currently humans are good at. In this spirit, Image Captioning stands as a great test-bed for AI algorithms since it involves building understanding of an image and then generating meaningful sentences on top of it. 
 
+## TLDR; Demo
+
+> Deploying model on web 
+
+The aim of this post is not to provide a full tutorial on Image Captioning. For that I would suggest you to go through Andrej Karpathy's well written [paper]() and
+
+Since automatically describing the content of a picture connects both Computer Vision and Natural Language Processing...
+
+## Dataset Used
+
+## Feature Extraction from Image: MobileNets
+
+## Natural Language Generation: LSTMs
+
+## Skeleton Code for the Model and Model Summary
+
+## Caption Generation in Browser
+
+## Issues faced
+
+## Complete Code
 {% if page.comments %}
 <div id="disqus_thread"></div>
 <script>
