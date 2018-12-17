@@ -6,7 +6,7 @@ categories: cs
 author: "Nilay Shrivastava"
 comments: true
 ---
-The holy grail of Computer Science and Artificial Intelligence research is to develop programmes that can combine knowledge/information from multiple domains to perform actions that currently humans are good at. In this spirit, Image Captioning stands as a great test-bed for AI algorithms since it involves building understanding of an image and then generating meaningful sentences on top of it. 
+The holy grail of Computer Science and Artificial Intelligence research is to develop programmes that can combine knowledge/information from multiple domains to perform actions that currently humans are good at. In this spirit, Image Captioning stands as a great test-bed for AI algorithms since it involves building understanding of an image and then generating meaningful sentences on top of it. Formally Image Captioning is defined as the process of automatically generating descriptions of the scene shown in an image. 
 
 ## TLDR; Demo
 
