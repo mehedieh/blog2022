@@ -42,13 +42,17 @@ We stop the caption generation process when the language model emits an __END__ 
 
 ## Feature Extraction from Image: MobileNets
 
+Since the input data is an image, it is clear Convolutional Neural Networks (CNNs) are an attractive option as feature extractors. For high accuracy, most image captioning projects on Github use [Inception](https://ai.googleblog.com/2016/03/train-your-own-image-classifier-with.html) or Oxford's [VGG](http://www.robots.ox.ac.uk/~vgg/research/very_deep/) Model. Though good for a desktop demonstration, these models aren't suited for browser demonstration as they are quite heavy and compute intensive.
+
+So I turned to [MobileNet](https://ai.googleblog.com/2017/06/mobilenets-open-source-models-for.html) which is a class of light low-latency convolutional networks specially designed for resource constrained use-cases. In the complete model, MobileNet generates a low-dimensional representation of input image, which is fed to the language model.
+
 ## Natural Language Generation: LSTMs
 
 ## Skeleton Code for the Model and Model Summary
 
 ## Caption Generation in Browser
 
-## Issues faced
+## The Hard Part: Engineering Issues
 
 The primary issue 
 
