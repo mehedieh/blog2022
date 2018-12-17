@@ -13,7 +13,7 @@ This post summarises my approach for implementing a captioning model for browser
 ## TLDR; Demo
 
 To run the demo, click [here]({{site.baseurl}}/demos/image-captioning/).
-For the code, click [here](https://github.com/euler16/Image-Captioning).
+For the code, click [here](https://github.com/euler16/Image-Captioning-TensorFlowjs).
 
 > Deploying deep learning models on web is challenging since web imposes size constraints. This forced me to reduce number of parameters of the model substantially which in turn decreased accuracy. So the captions may sometimes be wayward. 
 
@@ -160,7 +160,7 @@ I would welcome any help on these issues!!
 
 ## Complete Code
 
-The complete code can be found [here](https://github.com/euler16/Image-Captioning). The training code is in form of a Google Colab Jupyter Notebook for easy reference. All you need to do to run it is to first upload the Flickr8k dataset on your google drive, then upload the notebook on google colab and execute it.
+The complete code can be found [here](https://github.com/euler16/Image-Captioning-TensorFlowjs). The training code is in form of a Google Colab Jupyter Notebook for easy reference. All you need to do to run it is to first upload the Flickr8k dataset on your google drive, then upload the notebook on google colab and execute it.
 
 ## Acknowledgement
 
