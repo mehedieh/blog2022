@@ -10,7 +10,8 @@ The holy grail of Computer Science and Artificial Intelligence research is to de
 
 ## TLDR; Demo
 
-To run the demo, click [here](https://euler16.github.io/demos/image-captioning/)
+To run the demo, click [here](https://euler16.github.io/demos/image-captioning/).
+For the code, click [here](https://github.com/euler16/Image-Captioning).
 
 > Deploying deep learning models on web is challenging since web imposes size constraints. This forced me to reduce number of parameters of the model substantially which in turn decreased accuracy. So the captions may sometimes be wayward. 
 
@@ -22,16 +23,14 @@ The aim of this post is not to provide a full tutorial on Image Captioning. For 
 
 This post documents my approach for implementing a captioning model for browser using Tensorflow.js
 
-Since automatically describing the content of a picture connects both Computer Vision and Natural Language Processing...
-
 ## Dataset Used
 
 Most state-of-the-art neural architectures have been trained using __Microsoft Common Objects in Context__ ([MSCOCO](http://cocodataset.org/#home)) dataset. The dataset weighs around 25GB and contains more than 200k images across 80 object categories having 5 captions per image. Since I am an undergrad I don't have access to computational power to process such a huge dataset.
 
-Therefore I used __Flickr8k__ [Dataset]() provided by University of Illinois Urbana-Champaign. The dataset is 1GB large and consists of 8k images each having 5 captions. Due to its relatively small size I could easily use Flickr8k with Google Colab notebooks.
+Therefore I used __Flickr8k__ [Dataset](http://nlp.cs.illinois.edu/HockenmaierGroup/Framing_Image_Description/KCCA.html) provided by University of Illinois Urbana-Champaign. The dataset is 1GB large and consists of 8k images each having 5 captions. Due to its relatively small size I could easily use Flickr8k with Google Colab notebooks.
 
 ## Model Architecture
-<img src="../../../../assets/image-captioning/image_cap_arch.png">
+<img src="{{site.baseurl}}/assets/image-captioning/image_cap_arch.png">
 
 As shown above the complete neural captioning architecture can be divided into two parts.
 1. __The Feature Extractor__ : which takes an image as input and outputs a low dimensional condensed repersentation of the image.
@@ -44,19 +43,110 @@ We stop the caption generation process when the language model emits an __END__ 
 
 Since the input data is an image, it is clear Convolutional Neural Networks (CNNs) are an attractive option as feature extractors. For high accuracy, most image captioning projects on Github use [Inception](https://ai.googleblog.com/2016/03/train-your-own-image-classifier-with.html) or Oxford's [VGG](http://www.robots.ox.ac.uk/~vgg/research/very_deep/) Model. Though good for a desktop demonstration, these models aren't suited for browser demonstration as they are quite heavy and compute intensive.
 
-So I turned to [MobileNet](https://ai.googleblog.com/2017/06/mobilenets-open-source-models-for.html) which is a class of light low-latency convolutional networks specially designed for resource constrained use-cases. In the complete model, MobileNet generates a low-dimensional representation of input image, which is fed to the language model.
+So I turned to [MobileNet](https://ai.googleblog.com/2017/06/mobilenets-open-source-models-for.html) which is a class of light low-latency convolutional networks specially designed for resource constrained use-cases. In the complete architecture, MobileNet generates a low-dimensional (1000 dimensional Tensor) representation of input image, which is fed to the language model for sentence generation. 
 
 ## Natural Language Generation: LSTMs
 
+To generate captions, Long Short Term Memory (LSTM) layers were used. LSTM based models are in most cases de-facto models for sequence modelling tasks. These are actually a specialised variant of a larger class of models called Recurrent Neural Networks which I have described in a previous [post](https://euler16.github.io/cs/2017/06/30/playing-with-rnn.html).
+
+> The feature vector obtained from MobileNet is applied at every time step in the LSTM layer. This is essentially a design choice and I was influenced by the repositories I referred.
+
 ## Skeleton Code for the Model and Model Summary
+
+{% highlight python %}
+x = 10
+for i in range(10):
+    x += 10
+
+{% endhighlight %}
 
 ## Caption Generation in Browser
 
+I used [TensorFlow.js](https://js.tensorflow.org) for browser demonstration (other alternatives like Onnxjs do exist and I plan to work on them in future). The feature extractor part, i.e. MobileNet was easily obtained as pretrained model from tfjs-models repo using the following code :
+{% highlight javascript%}
+const mobilenet = await tf.loadModel('https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json');
+
+// remove the top layer of mobilenet to use it as feature extractor
+const layer = mobilenet.getLayer('conv_preds');
+
+mobilenet = tf.model({
+    'inputs': mobilenet.inputs,
+    'outputs': layer.output
+});
+{% endhighlight %}
+
+The trained Keras model was sharded using [tfjs-converter](https://github.com/tensorflow/tfjs-converter). The shards as well as the model.json file obtained using the converter are then loaded in the browser using the following code snippet: 
+{% highlight javascript %}
+// model.json and shards are to be kept in same folder
+model = await tf.loadModel('model/model.json');
+{% endhighlight %}
+
+For the prediction part I used normal max search which was implemented using the following subroutine: 
+{% highlight javascript %}
+function caption(img) {
+
+    let flattenLayer = tf.layers.flatten();
+    return tf.tidy(()=> {
+
+        // startWord will eventually contain the entire caption
+        let startWord = ['<start>'];
+        let idx,wordPred;
+         
+        // feature extraction using mobilenet
+        let e = flattenLayer.apply(mobileNet.predict(img));
+        
+        while (true) {
+            /* caption generating loop */
+
+            let parCaps = []; // word that is fed into the language model
+            for (let j = 0; j < startWord.length; ++j) {
+                parCaps.push(word2idx[startWord[j]]);
+            }
+            parCaps = tf.tensor1d(parCaps)
+                        .pad([[0, maxLen - startWord.length]])
+                        .expandDims(0);
+
+            // feature representation and word fed together
+            let preds = model.predict([e,parCaps]);  
+
+            preds = preds.reshape([preds.shape[1]]);
+            
+            idx = preds.argMax().dataSync();
+            wordPred = idx2word[idx];
+            
+            startWord.push(wordPred);            
+            if(wordPred=='<end>'||startWord.length>maxLen)
+                break;
+        }
+
+        startWord.shift();
+        startWord.pop();
+        
+        cap = startWord.join(' ');
+        capField.innerHTML = cap;
+
+    }); 
+}
+{% endhighlight %}
+
 ## The Hard Part: Engineering Issues
 
-The primary issue 
+The primary issue faced while developing the demo were: 
+1. Reducing model size while still retaining significant accuracy.
+2. Learning how to use FileReader API in order to add an upload option, something which I hadn't done before.
+3. Making caption generation as non-blocking as possible. When I wrote the first javascript implementation, the browser used to take around 6 minutes to generate captions after clicking the generate button. Its much lesser now but still not as interactive as ideally one would expect. The reasons behind this are as follows:
+   * Orthogonal Initialization: Tensorflow.js complains that this is would slow down the application but I couldn't find any solution. I think it is because of the LSTM layers used in the model
+   * The while loop generating the caption (in caption()) blocks the UI thread making the app unresponsive for sometime. I tried a lot of solution including making the loop completely recursive as suggested [here](https://medium.com/@maxdignan/making-blocking-functions-non-blocking-in-javascript-dfeb9501301c), but couldn't succeed.
+I would welcome any help on these issues!!
 
 ## Complete Code
+
+The complete code can be found [here](https://github.com/euler16/Image-Captioning). The training code is in form of a Google Colab Jupyter Notebook for easy reference. All you need to do to run it is to first upload the Flickr8k dataset on your google drive, then upload the notebook on google colab and execute it.
+
+## Acknowledgement
+
+* I was inspired by [Zaid Alyafaei's](https://github.com/zaidalyafeai/zaidalyafeai.github.io) Deep Learning projects which are also a great source for getting acquianted with TensorFlow.js
+* The code used for training the model is essentially built over [Yash Katariya's](https://yashk2810.github.io/Image-Captioning-using-InceptionV3-and-Beam-Search/) code for Image Captioning.
 
 {% if page.comments %}
 <div id="disqus_thread"></div>
