@@ -140,7 +140,7 @@ async function start() {
         'outputs': layer.output
     });
 
-    model = await tf.loadModel('../../../../models/image-captioning/model.json');
+    model = await tf.loadModel('model/model.json');
     console.log("Inside start()");
     modelLoaded();
 }

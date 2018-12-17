@@ -14,12 +14,7 @@ The holy grail of Computer Science and Artificial Intelligence research is to de
 
 > Moreover since the model uses LSTMs, TensorFlow.js warns about slowness resulting from Orthogonal Initialization. So your browser (especially Firefox) may warn you about this page slowing down your browser or your UI might get unresponsive for sometimes. Don't worry that is happening because JavaScript is performing heavy blocking computation!
 
-<div id="txt">Loading Models ...</div>
-<input type="file" id="imageLoader" name="imageLoader" />
-<img src="../../../../assets/image-captioning/picture.jpg" id="image" width="400">
-<button type="button" id="btn">Generate Caption</button>
-<div id="caption"></div>
-
+To run the demo, click [here]()
 
 The aim of this post is not to provide a full tutorial on Image Captioning. For that I would encourage you to go through Andrej Karpathy's [presentation](https://www.youtube.com/watch?v=yk6XDFm3J2c) and Google's Show and Tell [paper](https://arxiv.org/pdf/1609.06647.pdf).
 
@@ -38,15 +33,6 @@ Since automatically describing the content of a picture connects both Computer V
 ## Issues faced
 
 ## Complete Code
-
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.3/dist/tf.min.js"></script>
-<script src="../../../../models/image-captioning/word2idx.js"></script>
-<script src="../../../../models/image-captioning/idx2word.js"></script>
-<script src="../../../../js/image-captioning/caption.js"></script>
-<script>
-
-
-</script>
 
 {% if page.comments %}
 <div id="disqus_thread"></div>
