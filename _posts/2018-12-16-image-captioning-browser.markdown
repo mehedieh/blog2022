@@ -6,7 +6,9 @@ categories: cs
 author: "Nilay Shrivastava"
 comments: true
 ---
-The holy grail of Computer Science and Artificial Intelligence research is to develop programmes that can combine knowledge/information from multiple domains to perform actions that currently humans are good at. In this spirit, Image Captioning stands as a great test-bed for AI algorithms since it involves building understanding of an image and then generating meaningful sentences on top of it. 
+The holy grail of Computer Science and Artificial Intelligence research is to develop programmes that can combine knowledge/information from multiple domains to perform actions that currently humans are good at. In this spirit, Image Captioning stands as a great test-bed for AI algorithms since it involves building understanding of an image and then generating meaningful sentences on top of it. Formally Image Captioning is defined as the process of automatically generating descriptions of the scene shown in an image.  The aim of this post is not to provide a full tutorial on Image Captioning. For that I would encourage you to go through Andrej Karpathy's [presentation](https://www.youtube.com/watch?v=yk6XDFm3J2c) and Google's Show and Tell [paper](https://arxiv.org/pdf/1609.06647.pdf).
+
+This post summarises my approach for implementing a captioning model for browser (that is doing all computations in browser) using Tensorflow.js.
 
 ## TLDR; Demo
 
@@ -17,15 +19,9 @@ For the code, click [here](https://github.com/euler16/Image-Captioning).
 
 > Moreover since the model uses LSTMs, TensorFlow.js warns about slowness resulting from Orthogonal Initialization. So your browser (especially Firefox) may warn you about this page slowing down your browser or your UI might get unresponsive for sometimes. Don't worry that is happening because JavaScript is performing heavy blocking computation!
 
-
-
-The aim of this post is not to provide a full tutorial on Image Captioning. For that I would encourage you to go through Andrej Karpathy's [presentation](https://www.youtube.com/watch?v=yk6XDFm3J2c) and Google's Show and Tell [paper](https://arxiv.org/pdf/1609.06647.pdf).
-
-This post documents my approach for implementing a captioning model for browser using Tensorflow.js
-
 ## Dataset Used
 
-Most state-of-the-art neural architectures have been trained using __Microsoft Common Objects in Context__ ([MSCOCO](http://cocodataset.org/#home)) dataset. The dataset weighs around 25GB and contains more than 200k images across 80 object categories having 5 captions per image. Since I am an undergrad I don't have access to computational power to process such a huge dataset.
+Most state-of-the-art neural architectures have been trained using __Microsoft Common Objects in Context__ ([MSCOCO](http://cocodataset.org/#home)) dataset. The dataset weighs around 25GB and contains more than 200k images across 80 object categories having 5 captions per image. Unfortunately I am an undergrad and I don't have access to computational power required to process such a huge dataset.
 
 Therefore I used __Flickr8k__ [Dataset](http://nlp.cs.illinois.edu/HockenmaierGroup/Framing_Image_Description/KCCA.html) provided by University of Illinois Urbana-Champaign. The dataset is 1GB large and consists of 8k images each having 5 captions. Due to its relatively small size I could easily use Flickr8k with Google Colab notebooks.
 
@@ -41,7 +37,7 @@ We stop the caption generation process when the language model emits an __END__ 
 
 ## Feature Extraction from Image: MobileNets
 
-Since the input data is an image, it is clear Convolutional Neural Networks (CNNs) are an attractive option as feature extractors. For high accuracy, most image captioning projects on Github use [Inception](https://ai.googleblog.com/2016/03/train-your-own-image-classifier-with.html) or Oxford's [VGG](http://www.robots.ox.ac.uk/~vgg/research/very_deep/) Model. Though good for a desktop demonstration, these models aren't suited for browser demonstration as they are quite heavy and compute intensive.
+Since the input data is an image, it is clear Convolutional Neural Networks (CNNs) are an attractive option as feature extractors. For high accuracy, most image captioning projects on Github use [Inception](https://ai.googleblog.com/2016/03/train-your-own-image-classifier-with.html) or Oxford's [VGG](http://www.robots.ox.ac.uk/~vgg/research/very_deep/) Model. Though good for a desktop demonstration, these models aren't suited for a fully front-end demo as they are quite heavy and compute intensive.
 
 So I turned to [MobileNet](https://ai.googleblog.com/2017/06/mobilenets-open-source-models-for.html) which is a class of light low-latency convolutional networks specially designed for resource constrained use-cases. In the complete architecture, MobileNet generates a low-dimensional (1000 dimensional Tensor) representation of input image, which is fed to the language model for sentence generation. 
 
@@ -83,7 +79,7 @@ The model obtained can be summarised as follows:
 
 ## Caption Generation in Browser
 
-I used [TensorFlow.js](https://js.tensorflow.org) for the browser demonstration (other alternatives like Onnxjs do exist and I plan to work on them in future). The feature extractor part, i.e. MobileNet was easily obtained as pretrained model from tfjs-models repo using the following code :
+For the demo I used [TensorFlow.js](https://js.tensorflow.org), A JavaScript library for training and deploying models in browser (other alternatives like Onnxjs do exist and I plan to work on them in future). The feature extractor part, i.e. MobileNet was easily obtained as pretrained model from TensorFlow.js-models repo using the following code :
 {% highlight javascript%}
 const mobilenet = await tf.loadModel('https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json');
 
