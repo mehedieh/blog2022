@@ -58,7 +58,7 @@ Apart from being an intellectual exercise, writing technical blogs is looked qui
     This is something that is deliberately neglected when we are in school. 'If you work hard you will always succeed' seems to be the moral of every other story that we read. The point is that these stories don't capture all the complexities of life. There are gazillion many random variables that are potent enough to ruin your result no matter how hard you have worked for it. Learn to deal with the fact that there will be moments when in spite of all your best efforts, you will end up being disappointed by the outcome. But mind it I am not telling you to stop doing your best and be a defeatist, resigning yourself to those random factors. On the contrary you should, apart from working hard, plan your efforts in a way that accounts for those random variables. This is analogous to how electrical engineers keep a tolerance band while designing circuit elements to prevent circuit failures when there is a sudden random spike in current.
 
 ## Internships, Placements from a CS perspective
-
+Internships and placements are quite
 ### Preparing for Internships and Placements
 **When should you start preparing from** <br>
 **What should you focus on during preparation** <br>
@@ -66,7 +66,7 @@ Apart from being an intellectual exercise, writing technical blogs is looked qui
 > Competitve programming is not equal to Interview preparation
 
 **Writing your resume**
-### Structure of the interviews
+### Structure of the selection process
 
 ### How to approach your internship
 
@@ -74,7 +74,7 @@ Apart from being an intellectual exercise, writing technical blogs is looked qui
 
 
 ## Undergraduate Research
-
+Doing research during bachelor's degree is not necessary but is useful in my opinion. Research work requires a lot 
 ### Expectations from undergraduate research
 **Keep a research journal** : <br>
 **Writing a research paper** : The 'Sturmtruppentaktik' (German for 'Storm troop tactics')
