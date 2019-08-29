@@ -98,7 +98,8 @@ The tactic is as follows
 You should remember the first draft is the most time consuming and boring part of the research process. Using the above tactic you will be able to get over with it quickly. For more insights on writing research papers, I recommend watching [this](https://www.youtube.com/watch?v=1AYxMbYZQ1Y) video from Microsoft Research.
 
 ## Keeping up Morale, Health
-Going about your bachelor's degree is not a mean feet. You will face hardships both personally wand professionally. Even if that's not the case you will sometimes feel like 
+Going about your bachelor's degree is not a mean feet. You will face hardships both personally and professionally. Even if that's not the case you will sometimes feel stressed, less enthusiastic, low on morale and in extreme cases depressed. Its not too difficult to imagine what consequences that can lead to. Unfortunately mental health of students is generally overlooked and dismissed as 'weakness'. Its an absolute necessity on your part to take care of your mental health. Sometimes a small discussion about it with your friends or something as trivial as taking a stroll outside can help alleviate it. At other times you might have to consult a counsellor. Don't be shy to do that. Remember you are doing all this (pursuing your degree) to keep yourself happy in the end. Stressing yourself to do that is inherently contradictory.
+
 ## Social life : Interaction, Gender diversity and more
 xyz
 ## Closing Thoughts
