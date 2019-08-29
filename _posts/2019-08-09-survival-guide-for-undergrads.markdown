@@ -74,15 +74,31 @@ Internships and placements are quite
 
 
 ## Undergraduate Research
-Doing research during bachelor's degree is not necessary but is useful in my opinion. Research work requires a lot 
-### Expectations from undergraduate research
-**Keep a research journal** : <br>
-**Writing a research paper** : The 'Sturmtruppentaktik' (German for 'Storm troop tactics')
+Doing research during bachelor's degree is not necessary but is useful in my opinion. Research work requires you to develop a lot of skills, creativity, technical writing, logical thinking, programming to name a few. All these skills are useful in any profession. Therefore I would suggest that even if you are not looking to study further after obtaining your bachelor's degree, you should try working on at least one research project. It doesn't have to be anything fancy or groundbreaking. You could do a comparitive study of different algorithms used to solve a certain problem, analyse how an algorithm behaves when it gets some weird input or you could even write a paper on some project you worked on. Its not imperative for you to have it published in a big conference. You can simply put it on arxiv.org. The message is indulge in research to enhance the skills I mentioned above. And of course you do get bragging rights if you have a paper :).
+
+**Expectations from undergraduate research** : People in general don't expect you to do something earth shattering from students pursuing their bachelor's degree. It would be exceptional if you manage to do so but you shouldn't be disappointed if the progress you make doesn't seem ground breaking. Remember great results are a culmination of years of scientific output. Therefore if you are working on a large problem and you manage to find a better solution to a small subproblem, don't be afraid to publish it. This has two advantages.
+1. Doing so is **motivating**. Research takes time and it is quite common to lose interest in between. In such a situation nothing beats the happiness of paper acceptance.
+2. It would help you get valuable feedback on the approach you are using to solve the larger/higher order problem. 
+
+Ofcourse you should discuss the progress you have made with your advisor. This would help you avoid a situation in which you spend weeks writing a paper on something that is too trivial to be accepted in a reputed conference/journal.
+<br>
+
+**Keep a research journal** : Very often you will find that you can't just brainstorm research ideas out of the blue. It takes time. And even when they do come, they would arrive in bits and pieces. Therefore I would suggest you to keep a journal where you scribble ideas, draw rough diagrams etc. When you read that journal at a later time you will realise some of those 'bits' were germinal ideas leading to something significant.<br>
+
+**Writing a research paper** : As I mentioned in an earlier passage, writing is difficult. When you will sit down to write about your research work, you will find yourself wanting for words and phrases to express yourself. This is what is called 'Writer's Block'. To tackle that I use Writer's 'Sturmtruppentaktik' (German for 'Storm troop tactics')
 
 > Sturmtruppen or Storm troops were elite German shock troops whose main focus was speed and initiative. German army attacks would consist of Storm troopers bypassing serious resistance from enemy troops until they reached enemy artillery positions which were then neutralised. The regular troops would then mop of the enemy positions avoided by the Storm troops.
 
+The tactic is as follows
+1. Write all the headings and subheadigns you want to have in your paper. (First wave)
+2. Then for each paragraph write a summary (in a few words) that tells you what the purpose of the paragraph is. (Second wave)
+3. For each paragraph summary write three points you will mention in order to achieve the paragraph's   purpose.Avoid thinking about the English when you jot down the above points. Its ok if those points are linguistically crude. (Third wave)
+4. Mopping up : Start expanding those points into coherent sentences (First draft of you paper is ready!!)
+
+You should remember the first draft is the most time consuming and boring part of the research process. Using the above tactic you will be able to get over with it quickly. For more insights on writing research papers, I recommend watching [this](https://www.youtube.com/watch?v=1AYxMbYZQ1Y) video from Microsoft Research.
+
 ## Keeping up Morale, Health
-xyz
+Going about your bachelor's degree is not a mean feet. You will face hardships both personally wand professionally. Even if that's not the case you will sometimes feel like 
 ## Social life : Interaction, Gender diversity and more
 xyz
 ## Closing Thoughts
