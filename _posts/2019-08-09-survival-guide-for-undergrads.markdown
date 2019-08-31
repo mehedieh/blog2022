@@ -58,19 +58,54 @@ Apart from being an intellectual exercise, writing technical blogs is looked qui
     This is something that is deliberately neglected when we are in school. 'If you work hard you will always succeed' seems to be the moral of every other story that we read. The point is that these stories don't capture all the complexities of life. There are gazillion many random variables that are potent enough to ruin your result no matter how hard you have worked for it. Learn to deal with the fact that there will be moments when in spite of all your best efforts, you will end up being disappointed by the outcome. But mind it I am not telling you to stop doing your best and be a defeatist, resigning yourself to those random factors. On the contrary you should, apart from working hard, plan your efforts in a way that accounts for those random variables. This is analogous to how electrical engineers keep a tolerance band while designing circuit elements to prevent circuit failures when there is a sudden random spike in current.
 
 ## Internships, Placements from a CS perspective
-Internships and placements are quite
-### Preparing for Internships and Placements
-**When should you start preparing from** <br>
-**What should you focus on during preparation** <br>
 
-> Competitve programming is not equal to Interview preparation
+**Industrial or Research Internship?** - 
+If 
+**Does your academic performance matter?** -
+A lot! Companies place a bar (GPA cutoff) on the candidates who can take part in the recruitment process. In some companies top rankers implicitly have an edge over other students even if the company doesn't mention that in its orientation.  At NSIT students who have backlogs are barred from sitting in recruitment process for top companies. I think this emphasis on academic performance serves two benefits to the company. First of all it means that the company representative have a manageable number of candidates to deal with. Secondly a good academic performance is, in a very conservative sense (and not entirely correct), a measure of obedience. That is it shows that a student with a good GPA can work and excel within the system.
+
+**Which companies to sit for?** - 
+Those which offer a profile which is concurrent to what you want to pursue as a career goal. Apart from that, before a company arrives for recruitment you should make it a point to ask seniors about its the work culture, perks and shortcomings. Preferably ask those who are currently employed or were employed in the past in that organization. This is important because depending on your placement cell policies you might not allow you to sit in placements if you get a pre-placement offer during your internship. You will then have to depend on off-campus opportunities in order to get a company of your choice. A simple rule of thumb is that reputed companies generally come early. Also make sure you don't judge a company by its internship stipend! There are many companies that offer higher than average internship stipend but would end up disappointing you with their full time package.
+
+**What if I don't get an internship in the company of my choice?** - 
+That's ok! make sure you keep on preparing for the placement season. Should you accept the PPO? Depends. If the package is low  compared to the average placement offer in your institution and your placement cell policy would allow you to sit for good corporations or startups, then take it (because job security). If they don't then refuse.  If the package is around the average then you should make the decision based on how confident you are about your ability to crack offcampus interviews. Keep in mind that getting such interviews is a matter of chance. In case the package you are being offered is above average then I would suggest you to take it and prepare for offcampus opportunities. 
+If you happen to be from premier institutions of India (read IITs, IIIT-H and BITS) you will have more leeway so you can reject PPO offers without giving much weightage to job security. Many good companies would either higher exclusively from your campus or would give your profile a preference based on the reputation of your alma mater.
+
+In case you are not able to get into any company for internship don't lose heart. Try working on a research project under a professor. Ask him to issue you a letter stating that you worked as an intern under his guidance.  Research projects won't consume all of your time and you can also work remotely. Moreover you can always write that you worked as a research intern so your inability to clear internship season successfully wouldn't reflect on your resume. Utilize the time you save for preparation. If you think logically you will have more time for placement preparation at your disposal than any of your peers doing internships in companies. Consequently it doesn't come as a surprise when you will find that students who couldn't get an industrial internship, crack placement interviews early.
+
+### Structure of the selection process
+
+
+### Preparing for Internships and Placements
+
+**When should you start preparing from?** -  
+Assuming you are in an Indian engineering college, you should ideally start preparing from the fourth semester. However targeted and smart study during the two month summer vacation following your fourth semester is enough for cracking internship tests and interviews. However make sure you know basic programming by the end of your second year<br>
+
+A similar scenario exists for placement preparation. However since placements hold a lot more importance, the earlier you start the better. Best case scenario - don't go out of touch with coding preparation after you bag an internship (you anyways won't if you are not satisfied with the current internship offer or if you haven't got one).
+
 
 **Writing your resume**
-### Structure of the selection process
+
+**Programming Language to use** - Either C++ or Java. Although theoretically any language would do, but practically speaking many programming test platforms don't support languages other than these two. If you don't have a preference, I would suggest using C++. You will have slightly less boilerplate code to write.  
+
+**What should you focus on during preparation?** - 
+Look at past interview question the company has asked in its interviews. Designing new questions is a difficult task so most interview questions are recycled. The company might throw up fresh questions during the coding round, but those are usually simply twisted versions of the some standard programming problems. A good reference for company practice problems is [GeeksfoGeeks](https://www.geeksforgeeks.org/). 
+
+One thing that you should keep in mind is that _competitive programming is not equivalent to internship/placement preparation_. The structure of the questions, topic coverage is different. Even if you are an excellent competitive programmer, try to get a feel for the questions that you will face in your test. One thing you will understand immediately is that you aren't required to be as creative as you have to be while solving competitive programming problems. I have seen many good competitive coders lose out on company tests because they either overthink a question or try to optimize a solution more than what is required. Remember your priority is to get the question right not to produce the most efficient solution.
+
+1. Algorithms and Data Structures (on a scale of 1-5 (5 being most important)): _Dynamic Programming_ (5), _Array-String problems_ (5),  _Greedy algorithms_ (4), _Trees_ (3 for internship, 4 for placement), _Linked-Lists_ (3), _Graph_ (2 for internship, 3 for placements). 
+
+2. Programming Language features : (for C++ (I don't remember for Java)) _templates_, _oops_, _friend functions_, _access specifiers_, _compilation process_ (what happens when your code is compiled and executed). Also you can always ask the interviewer to ask questions regarding the language of your choice.
+
+3. Computer Engineering Topics : _Operating Systems_ (5), _DBMS_ (5), _Networking_ (3 for internship, 4 for placements). If these topics haven't been covered in your college curriculum before your internship interviews you can tell the interviewer about it. However this wouldn't work during your placement interview.
+
+You should move to the last two topics only after you have mastered Algorithms and Data Structures. This is because they have zero to low weightage in first (coding) round. Most of the time you can clear the first round by completing the programming questions only. The last two are mostly asked during face-to-face interview rounds and even then (in case of internships) you can get away by solving algorithmic questions asked by the interviewer. Remember this is not the case with placement interviews.
+
+### Offcampus opportunities
 
 ### How to approach your internship
 
-### Offcampus opportunities
+
 
 
 ## Undergraduate Research
