@@ -60,7 +60,16 @@ Apart from being an intellectual exercise, writing technical blogs is looked qui
 ## Internships, Placements from a CS perspective
 
 **Industrial or Research Internship?** - 
-If 
+If you want to go for higher studies, trying finding a research internship. Such an internship would serve you on two fronts 
+    1. You can get a paper written during the period of your internship.
+    2. You can obtain a letter of recommendation from the professor under whose guidance you did your internship.
+Good quality research paper and a recommendation letter from a faculty at a reputed institution would bolster your chances of getting a good admit.
+How do you apply for such an internship? You would have to personally mail every professor ready to take an intern. But make sure you have read a few of their past research papers before applying. Your email should cast an impression that you are a serious candidate and you are familiar with his/her line of work.
+In case you are not able to obtain such an internship, that's fine! Go for an industrial one. However chances of getting a research based projects are very low. So you might have to take time out to work on some personal research projects. There do exist companies such as Adobe, Samsung that offer research internships to undergrads. But they are quite selective while hiring and one of the major factors they take into account is your college brand (unfair but thats the way it is). Overall you should make sure that you have a good professional relationship with your manager so that he is willing to recommend you when you require.
+
+It goes without saying that if higher studies isn't you goal, you should seek internship in reputed companies. The benefit being you will get a first hand experience of what life is like in that industry. Also if you perform well enough during your internship, you might get a pre-placement offer. So you won't have worry about not having a back up during your placement season.
+
+
 **Does your academic performance matter?** -
 A lot! Companies place a bar (GPA cutoff) on the candidates who can take part in the recruitment process. In some companies top rankers implicitly have an edge over other students even if the company doesn't mention that in its orientation.  At NSIT students who have backlogs are barred from sitting in recruitment process for top companies. I think this emphasis on academic performance serves two benefits to the company. First of all it means that the company representative have a manageable number of candidates to deal with. Secondly a good academic performance is, in a very conservative sense (and not entirely correct), a measure of obedience. That is it shows that a student with a good GPA can work and excel within the system.
 
@@ -74,21 +83,30 @@ If you happen to be from premier institutions of India (read IITs, IIIT-H and BI
 In case you are not able to get into any company for internship don't lose heart. Try working on a research project under a professor. Ask him to issue you a letter stating that you worked as an intern under his guidance.  Research projects won't consume all of your time and you can also work remotely. Moreover you can always write that you worked as a research intern so your inability to clear internship season successfully wouldn't reflect on your resume. Utilize the time you save for preparation. If you think logically you will have more time for placement preparation at your disposal than any of your peers doing internships in companies. Consequently it doesn't come as a surprise when you will find that students who couldn't get an industrial internship, crack placement interviews early.
 
 ### Structure of the selection process
+The first round of both the internship and the placement process consists of a programming test. You will be given 2-3 programming questions to solve in a limited time frame. Additionally you can also get a set of MCQ questions based on OS, DBMS, Basic Maths etc. Keep in mind that programming questions will always outweigh the MCQs.
+
+Later rounds are called 'technical interviews' and they follow a common template. You will usually have an interviewer (sometimes more than one), who will ask you to solve a coding problem on board, some basic viva-type discussion. They might ask you questions related to your resume. The number of such rounds depends on the company.
+
+The final round is termed as 'HR round'. It is essentially a non-technical round meant to analyze you as a person. One thing I would suggest is to be original. Keep in mind that the people who are conducting interviews are no greenhorns. They have been through a wide range of made-up answers. There is a high possibility that your cliched answer might not have the intended effect.
+
+Generally companies follow this format when they come for on-camous placement. They can however, alter the selection pattern based on their convenience. Some companies also conduct a mental ability test to filter out candidates before the coding round. A few companies also keep a group discussion round. You might also get a one week project and based on your work you will be called for an interview.
 
 
 ### Preparing for Internships and Placements
 
-**When should you start preparing from?** -  
+**When should you start preparing from?** : 
 Assuming you are in an Indian engineering college, you should ideally start preparing from the fourth semester. However targeted and smart study during the two month summer vacation following your fourth semester is enough for cracking internship tests and interviews. However make sure you know basic programming by the end of your second year<br>
 
 A similar scenario exists for placement preparation. However since placements hold a lot more importance, the earlier you start the better. Best case scenario - don't go out of touch with coding preparation after you bag an internship (you anyways won't if you are not satisfied with the current internship offer or if you haven't got one).
 
 
-**Writing your resume**
+**Writing your resume** :
+Resume is a documented summary of your skills and experience. It helps the interviewer to decide what skills to test you on during the interview. An ideal resume should mention your college scores, past awards, internships done, projects, skills (languages/tech stack you are proficient in) and should contain links to github and linkedin profiles. You should explain your projects briefly and should have hyperlinks to the demo or code repository.
+There is no standard template for a resume. It is suggested that your resume should not look too cluttered, should have a your photograph and shouldn't look too fanciful. Since its just the begining of your professional career interviewers expect your resume to be limited to a single page. There are hundreds of websites offering resume templates and you can go with anyone of them. I personally use resume's built using Latex. You can them [here](https://www.overleaf.com/latex/templates/recent/page/5?addsearch=resume). 
 
-**Programming Language to use** - Either C++ or Java. Although theoretically any language would do, but practically speaking many programming test platforms don't support languages other than these two. If you don't have a preference, I would suggest using C++. You will have slightly less boilerplate code to write.  
+**Programming Language to use** : Either C++ or Java. Although theoretically any language would do, but practically speaking many programming test platforms don't support languages other than these two. If you don't have a preference, I would suggest using C++. You will have slightly less boilerplate code to write.  
 
-**What should you focus on during preparation?** - 
+**What should you focus on during preparation?** :
 Look at past interview question the company has asked in its interviews. Designing new questions is a difficult task so most interview questions are recycled. The company might throw up fresh questions during the coding round, but those are usually simply twisted versions of the some standard programming problems. A good reference for company practice problems is [GeeksfoGeeks](https://www.geeksforgeeks.org/). 
 
 One thing that you should keep in mind is that _competitive programming is not equivalent to internship/placement preparation_. The structure of the questions, topic coverage is different. Even if you are an excellent competitive programmer, try to get a feel for the questions that you will face in your test. One thing you will understand immediately is that you aren't required to be as creative as you have to be while solving competitive programming problems. I have seen many good competitive coders lose out on company tests because they either overthink a question or try to optimize a solution more than what is required. Remember your priority is to get the question right not to produce the most efficient solution.
@@ -103,13 +121,17 @@ You should move to the last two topics only after you have mastered Algorithms a
 
 ### Offcampus opportunities
 
+Companies generally advertise offcampus openings after they are done with campus visits. These advertisements are put out on their LinkedIn pages, Official websites or third party sites like ReferHire and InstaHyre. Some companies require you to obtain a referral from their employees. Here is where networking helps you big time. You can approach college seniors using LinkedIn and ask them to refer you to their companies. And ofcourse requesting a referral would be much more easier if you already know him personally. In case you do not, still try contacting them. Most people are comfortable referring someone from their alma mater.
+
+One key difference between oncampus and offcampus interviews is the structure of selection process. You might have to compete on an open platform with other applicants or the company might call you for an online [code-pair round](https://www.hackerrank.com/products/codepair/). Some companies conduct on-site rounds too.
+
 ### How to approach your internship
+So you have got an internship. Now what to do next? You should start casually reading about your company's products. Who knows you might find something that you are passionate about?. If that is the case you can ask the organization to set you up with a certain team (if thats feasible with that org). That's a fact most undergrads are unaware of. Even I was unaware of this until it happened to a close friend of mine who was a co-intern at Adobe.
 
-
-
+When you join your respective companies as interns, you will given a project to accomplish. THe idea behind assigning you a project is to make you comfortable with the inside processes of the company. Undergrads usually limit their internship experience to their intern project, stipend and pre-placement offer. And that's a huge opportunity loss. During your internship take out time to talk to other employees and discuss with them what they are working on. Make sure you take away a new skill or experience from your internship that would be useful to you in the future.
 
 ## Undergraduate Research
-Doing research during bachelor's degree is not necessary but is useful in my opinion. Research work requires you to develop a lot of skills, creativity, technical writing, logical thinking, programming to name a few. All these skills are useful in any profession. Therefore I would suggest that even if you are not looking to study further after obtaining your bachelor's degree, you should try working on at least one research project. It doesn't have to be anything fancy or groundbreaking. You could do a comparitive study of different algorithms used to solve a certain problem, analyse how an algorithm behaves when it gets some weird input or you could even write a paper on some project you worked on. Its not imperative for you to have it published in a big conference. You can simply put it on arxiv.org. The message is indulge in research to enhance the skills I mentioned above. And of course you do get bragging rights if you have a paper :).
+Doing research during bachelor's degree is not necessary but is useful in my opinion. Research work requires you to develop a lot of skills, creativity, technical writing, logical thinking, programming to name a few. All these skills are useful in any profession. Therefore I would suggest that even if you are not looking to study further after obtaining your bachelor's degree, you should try working on at least one research project. It doesn't have to be anything fancy or groundbreaking. You could do a comparitive study of different algorithms used to solve a certain problem, analyse how an algorithm behaves when it gets some weird input or you could even write a paper on some project you worked on. Its not imperative for you to have it published in a big conference. You can simply put it on arxiv.org. The underlying message is - _indulge in research to enhance the skills I mentioned above_. And of course you also get bragging rights if you have a paper :).
 
 **Expectations from undergraduate research** : People in general don't expect you to do something earth shattering from students pursuing their bachelor's degree. It would be exceptional if you manage to do so but you shouldn't be disappointed if the progress you make doesn't seem ground breaking. Remember great results are a culmination of years of scientific output. Therefore if you are working on a large problem and you manage to find a better solution to a small subproblem, don't be afraid to publish it. This has two advantages.
 1. Doing so is **motivating**. Research takes time and it is quite common to lose interest in between. In such a situation nothing beats the happiness of paper acceptance.
@@ -119,6 +141,8 @@ Ofcourse you should discuss the progress you have made with your advisor. This w
 <br>
 
 **Keep a research journal** : Very often you will find that you can't just brainstorm research ideas out of the blue. It takes time. And even when they do come, they would arrive in bits and pieces. Therefore I would suggest you to keep a journal where you scribble ideas, draw rough diagrams etc. When you read that journal at a later time you will realise some of those 'bits' were germinal ideas leading to something significant.<br>
+
+**Joining a research lab** : Contrary to the popular image of researchers sitting in isolation and churning out ground breaking theories, research specially in computer science is a collaborative activity. Many active areas in CS require additional computing hardware for making original research. Therefore I would highly advise you to join a research group (need not be in your college). Research labs would provide you with a peer group of like minded people who can guide you when you get stuck in your research work (Trust me that happens often!). An association with a good research group can do wonders for you. For instance I was a part of [MIDAS@IIITD](http://midas.iiitd.edu.in/) (led by Dr. Rajiv Ratn Shah) during my undergraduate years. Apart from the obvious benefit of getting access to necessary computing hardware, MIDAS also opened doors for me to collaborate with researchers from New York and Singapore. Moreover I was able to secure an internship at Adobe Media and Data Science Research team because of the research I did under Dr. Shah at MIDAS.
 
 **Writing a research paper** : As I mentioned in an earlier passage, writing is difficult. When you will sit down to write about your research work, you will find yourself wanting for words and phrases to express yourself. This is what is called 'Writer's Block'. To tackle that I use Writer's 'Sturmtruppentaktik' (German for 'Storm troop tactics')
 
@@ -132,13 +156,18 @@ The tactic is as follows
 
 You should remember the first draft is the most time consuming and boring part of the research process. Using the above tactic you will be able to get over with it quickly. For more insights on writing research papers, I recommend watching [this](https://www.youtube.com/watch?v=1AYxMbYZQ1Y) video from Microsoft Research.
 
-## Keeping up Morale, Health
+## Keeping up Morale and Health
 Going about your bachelor's degree is not a mean feet. You will face hardships both personally and professionally. Even if that's not the case you will sometimes feel stressed, less enthusiastic, low on morale and in extreme cases depressed. Its not too difficult to imagine what consequences that can lead to. Unfortunately mental health of students is generally overlooked and dismissed as 'weakness'. Its an absolute necessity on your part to take care of your mental health. Sometimes a small discussion about it with your friends or something as trivial as taking a stroll outside can help alleviate it. At other times you might have to consult a counsellor. Don't be shy to do that. Remember you are doing all this (pursuing your degree) to keep yourself happy in the end. Stressing yourself to do that is inherently contradictory.
 
-## Social life : Interaction, Gender diversity and more
-xyz
+## A short note on gender diversity
+Throughout my years at NSIT, I came across various schemes and policies in the name of affirmative action for women. Scholarships, Travel grants, exclusive internships and placement opportunities for women in dream companies were a source of great frustration for boys at my college. To be honest, I held that view to some extent. I was flummoxed as to why such measures were required to promote women. After all, being in college by default meant that you are part of a society which in principle agrees to the idea of equality of sexes. I couldn't imagine someone educated thinking otherwise. So the low percentage of women was merely a matter of time. Moreover since unemployment was a huge problem in my country and in our society unemployed men are stigmatised, exclusively hiring women rather than keeping it open for everyone was injustice.
+
+However during my internship at Adobe, I came to know how women face discrimination in subtle forms. My mentor recounted how a male told her to "show more skin" if she wants the attention of the audience (She was a speaker at a technical conference in US). A co-intern told me how her fellow classmate attributed her selection at Adobe to her gender and not to her talent (She was selected through the general open for all Adobe hiring process and she is one of the smartest computer engineers I know). This made me realise that these 'remarks' are actually barriers that silently discourage women from entering STEM in large numbers. Many seemingly 'harmless' comments that we throw around are essentially a manifestation of our inherent bias against women.
+
+Will exclusive hiring solve this problem? I am not sure. Such policies are not perfect but thats the best we have got! I am proud to be part of Adobe, one of the few companies that has taken solid initiatives to promote diversity and inclusion at workplace.
+
 ## Closing Thoughts
-xyz
+Final word of advice - All of this, engineering, college, internships, placements are just means. Means to keep you happy, to make you grow. Don't get too entangled into these 'means'. As an undergrad enjoy your life and never stop learning.
 {% if page.comments %}
 <div id="disqus_thread"></div>
 <script>
