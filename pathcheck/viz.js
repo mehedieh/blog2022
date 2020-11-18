@@ -76,7 +76,7 @@ document.querySelector("#vizBtn").addEventListener("click", function() {
 let ctx = document.getElementById("line").getContext('2d');
 window.lineChart = new Chart(ctx, {
         // The type of chart we want to create
-        type: 'line',
+        type: 'bar',
 
         // The data for our dataset
         data: {
