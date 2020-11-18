@@ -63,12 +63,13 @@ function getAge() {
 }
 
 document.querySelector("#vizBtn").addEventListener("click", function() {
-    
+
+    console.log("calling viz btn");
     document.getElementById("map").innerHTML = "";
-    let filename;   
+    let filename;
     filename = 'data/' + getGender() + '-' + getAge() + '.csv';
     console.log({"filename is": filename});
-    
+
     updateChart();
     display(filename, ["#D4EEFF", "#0099FF"]);
 });
@@ -91,8 +92,8 @@ window.lineChart = new Chart(ctx, {
 
         // Configuration options go here
         options: {
-            responsive: false//,
-            //maintainAspectRatio: false
+            responsive: true,
+            maintainAspectRatio: false
         }
 });
 
@@ -141,11 +142,11 @@ window.pieChrart = new Chart(document.getElementById("piechart").getContext("2d"
             label: 'f-statistic %' // for legend
         }],
         labels: [
-            "pct_cmnty_cli",
-            "pct_self_anosmia_ageusia",
-            "pct_hh_cli_weighted",
-            "pct_hh_fever_weighted",
-            "pct_self_fever",
+            "Difficulty Breathing ",
+            "Anosmia & Ageusia",
+            "COVID like Illness",
+            "Nausea",
+            "Fever",
         ]
     },
     type: 'polarArea',
@@ -155,7 +156,7 @@ window.pieChrart = new Chart(document.getElementById("piechart").getContext("2d"
 const correlationGraphProps = {
     selector: '.graph-container',
     data,
-    options: { 
+    options: {
       fixedNodeSize: true
     }
   }
