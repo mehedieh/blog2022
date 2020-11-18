@@ -91,8 +91,8 @@ window.lineChart = new Chart(ctx, {
 
         // Configuration options go here
         options: {
-            responsive: true,
-            maintainAspectRatio: false
+            responsive: false//,
+            //maintainAspectRatio: false
         }
 });
 
