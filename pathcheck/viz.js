@@ -106,7 +106,7 @@ function updateChart(state) {
         "gender": getGender(),
         "age": getAge()
     });
-    document.getElementById('line-heading').innerHTML = "CLI vs Time "+state;
+    document.getElementById('line-heading').innerHTML = " "+state;
     window.lineChart.data.labels = lineData[statecode][genderAge]["x"]
     window.lineChart.data.datasets[0].data = lineData[statecode][genderAge]["y"];
     window.lineChart.data.datasets[0].label = '% of ' + alterGender[getGender()] + ' aged ' + ageGroups[getAge()] + ' with CLI';
