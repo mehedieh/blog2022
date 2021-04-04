@@ -4,7 +4,7 @@ title : About
 permalink: /about/
 ---
 <h2><center>Nilay Shrivastava</center></h2>
-<!-- [Nilay]({{site.baseurl}}/assets/image.jpg){:height="250em" style="float: left;margin-right: 20px;margin-top: 7px"} -->
+![Nilay]({{site.baseurl}}/assets/nilay_shrivastava.jpg){:height="250em" style="float: left;margin-right: 20px;margin-top: 7px"}
 I am a graduate of the Computer Engineering department at Netaji Subhas Institute of Technology (NSIT). My interests span across Mathematics (specifically Topology, Stochastic Calculus), Deep Learning, Gradient free Optimization algorithms and Quantum Computing/Information Processing. After graduating from NSIT, I did an internship with Adobe's Media and Data Science Research Group (based in Noida, India). My internship project was about doing generative modeling in the domain of quantum machine learning. During my undergraduate degree, I also managed to squeeze internships at a startup Zeg.ai and then at Samsung Research, Banglore where I worked on constructing Deep Nets for low power devices. I also worked at [MIDSA@IIITD](http://midas.iiitd.edu.in/) under the guidance of [Dr. Rajiv Ratn Shah](), [Dr. Debanjan Mahata (Bloomberg, NY)](https://scholar.google.com/citations?user=8F1SwO0AAAAJ&hl=en) and [Dr. Amanda Stent (Bloomberg, NY)](https://cra.org/cra-w/amanda-stent/). My work there revolved around visual speech recognition. Currently, I am a full-time employee at Adobe Systems.
 
 I am a [KVPY](https://en.wikipedia.org/wiki/Kishore_Vaigyanik_Protsahan_Yojana) and [NTSE](https://en.wikipedia.org/wiki/National_Talent_Search_Examination) scholar too. For more, you can find my resume [here.](/assets/pdfs/NilayShrivastava.pdf)
