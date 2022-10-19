@@ -31,7 +31,7 @@ Example 3rd year choices include:
 - "Statistical Physics"
 
 Example 4th year choices include:
-- condensed matter, nuclear physics, particle physics, quantum field theory and general relativity at 4th year
+- Condensed matter, nuclear physics, particle physics, quantum field theory and general relativity at 4th year
 - "Gravity: An Introduction to Einstein's General Relativity" by Hartle
 
 
