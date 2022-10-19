@@ -1,252 +1,91 @@
 ---
 layout: post
-title:  "Beauty of Recursion"
-date:   2018-06-22 01:00:00 +0530
+title:  "How to start learning to code?"
+date:   2022-06-22 01:00:00 +0530
 categories: cs
-author: "Nilay Shrivastava"
+author: "Mehedi Hasan"
 comments: true
 ---
-Is there something visually beautiful that can come out of Recursion? Industry stalwarts hate it (recursion is a big NO in production code!) and undergrads (like me) sweat while doing time complexity analysis for algorithms employing recursion. But whichever side of the spectrum you are in the software world, you would agree that recursion has a charm of its own. During my undergraduate years as I became familiar with the Computer Science world around me, I began to appreciate the inherent idea behind recursion. Moreover I understood that it not just a fancy technique used by clever programmers, but is something that is intrinsic to nature itself. This post is a presentation of __art__ that I learned and then coded during my leisure time. 
+## Choose your ~~weapon~~ language
 
-In this sense this post is more of a showcase/gallery than an educational blog.
+As *Akira Toriyama* once said: " ***You should know a weapon doesn’t make the man*** ". It’s a quote from **Dragonball Z**, but the philosophy holds true for programming languages. A good developer is a good developer regardless of language. Learning any language will help you understand the core concepts of programming. However, you need to start someplace, and if you pick your first language wisely, you’ll drastically shorten the time to hit your goal.
 
+## Picking a language
 
-<script src="../../../../js/p5.min.js"></script>
-<script src="../../../../js/p5.dom.min.js"></script>
-# Fractal Trees
-This is the most common example of fractals.Notice how each part of the system is constructed recursively. Use the slider to generate more patterns
+Picking a language boils down to what you want to do. This is a quick list of general development goals and what language(s) are your best options to get there 
 
-<center><div id="tree" style="position: relative;"></div></center>
+> NOTE: this is not meant to indicate that these are the only languages that you can use for a given domain, just my suggestion on what to start with)  
+  
+  - Front-end web development (user interface and interaction): Javascript, HTML & CSS
 
-# Making things more natural: Stochastic Trees
-Although the tree patterns were beautiful, they were too symmetric to be natural. Below is an example of __naturalness__ can be embedded by combining randomness with recursion. The underlying algorithm doesn't traverse all children in the recursion tree everytime, rather it choses the recursion branch randomly.
-To make it more natural I also added the effect of __wind__ on our swaying tree.
-<center><div id="swayingtree" style="position: relative;"></div></center>
+  - Back-end web development (services that front-end web apps and mobile apps call out to): Ruby, Python, Javascript, or PHP
 
-> On older sytems the visualisation might be slow
+  - Mobile development: Swift (iOS) or Java (Android)
 
-# Using L-Systems
+  - Windows development: C#
 
-Another common technique for generating beautiful patterns is by using Lindenmayer system or L-System for short. It is a grammar (yes those same grammars that we study in Theory of Computation) having a set of production rules. They were invented to describe the structural growth of plants. To know more about L-Systems read [The Algorithmic Beauty of Plants](http://algorithmicbotany.org/papers/abop/abop.pdf). L-Systems deserve a blog post of their own and I plan to write one as soon as I find time. Meanwhile enjoy recreating plant growth by clicking generate button!
-<center><div id="L1" style="position: relative;"></div></center>
-Ain't it beautiful?
+  - MacOS development: Swift or Objective-C
 
-# Conclusion
-This is the most haphazard blog I have ever written. Paradoxically, this post took around five months to complete!! Thanks to internships, tests and unplanned undergrad life. My motivation behind this post was to indulge in and showcase something which I love to call __computational art__ . I would encourage you to experiment with recursion and create more such pieces of art. For code, checkout the github repostory of this [blog](https://github.com/euler16/euler16.github.io/tree/master/_posts).
+  - Operating systems, file systems, embedded systems, etc: C/C++
 
+  - Game development: (C++, Unity and C#)
 
-<script type="text/javascript">
-let width = 400;
-let height = 400; 
+  - Data Science: R 
 
-function tree(p) {
-    const PI = p.PI;
-    const TWO_PI = PI * 2;
+Naturally, there are other options for each of these. Javascript is useful for items 1-5, for instance. But the list is a good starting place as-is. 
 
-    let angle = PI / 4;
-    let slider;
-    
-    var canvas;
+> NOTE: A number of people contacted me and mentioned that in certain places, especially outside the US, the above list is different for back-end web development. In those locations, C# and Java are used more often than Python or Ruby. The suggestion is to check job postings where you plan (or hope) to work for the job and companies you want to work in and see what languages they require.
 
-    p.setup = () => {
-        canvas = p.createCanvas(width, height);
-        canvas.parent("tree");
-
-        slider = p.createSlider(0, TWO_PI, TWO_PI);
-        // hack!!
-        slider.position((p.width/2) + 350,p.height+550);
-
-    };
-
-    p.draw = () => {
-        p.background(51);
-        p.stroke(255);
-        angle = slider.value();
-        //console.log(angle);
-        p.translate(200, p.height);
-        p.branch(100);
-    };
-
-    p.branch = (len) => {
-
-        p.line(0, 0, 0, -len);
-        p.translate(0, -len);
-
-        if (len > 4) {
-            p.push();
-            p.rotate(angle);
-            p.branch(len * 0.67);
-            p.pop();
-            p.push();
-            p.rotate(-angle);
-            p.branch(len * 0.67);
-            p.pop();
-        }
-    };
-
-}
-
-const simpleTree = new p5(tree);
-
-function swaying(p) {
-    const PI = p.PI;
-    
-    let yoff = 0.005;
-    let seed = 6; //3
-
-    var canvas;
-    p.setup = ()=>{
-        canvas = p.createCanvas(width, height);
-        canvas.parent("swayingtree");
-    };
-
-    p.draw = ()=> {
-        p.background(51);
-        p.fill(255);
-
-        p.stroke(255);
-        p.translate(p.width / 2, p.height);
-        yoff += 0.005;
-        p.randomSeed(seed);
-        // Start the recursive branching!
-        p.branch(60, 0);
-    };
+# Finding good resources before start learning
 
 
-    p.mousePressed = ()=> {
-        yoff = p.random(1000);
-    };
+There are a ton of resources to learn to code out on the web. How do you sift through the chaff and find the real gems?
+
+Most resources fall into the following categories:
+- Books
+
+- Videos
+
+- Blogs/tutorials
+
+- Courses
+
+### Book
+
+Books are the traditional go-to resource. Search on [Libgen](https://www.libgen.is/) for your topic and read reviews on [Amazon](https://www.amazon.com/). Make sure that any books you're considering are new. Languages change and older books could slow your progress.
+
+### Video
+
+A lot of people have gravitated to videos to learn coding and other topics. [YouTube](https://www.youtube.com/) is the first place most people look. Fair warning, this is going to turn up a bunch of crap. Look at how many subscribers a given instructor has, and watch some videos to see if their style and method works for you. Another possible issue is that because video is more difficult to update for new versions of a language (or corresponding tools), some videos might be outdated.
+
+### Blog
+
+For blogs and tutorials, a simple google search like "best python tutorial" or "best swift tutorial for beginners" is a great place to start. As with videos, you'll have to try a few to see how they work with your learning style.
+
+### Online Course
+
+Online courses are the newest resource on the scene. [Codecademy](http://www.codecademy.com/) is one that a lot of people find immediately. However, after I talked to a lot of people who tried it, none really thought it did a good job. [Free Code Camp](http://www.freecodecamp.com/) or [The Odin Project](http://www.theodinproject.com/) are both highly regarded for web development. [Udacity](http://udacity.com/), [Coursera](http://www.coursera.com/), [Udemy](http://www.udemy.com/) all have courses in different genres. Each has reviews so you can compare and only look at ones that helped others.
+
+-
+# Where you should start
+Each development goal in the above list is different enough to require different starting points. I have not personally tried all of them, but have come across them when doing research. There also might be better ones, and so if you know of any, let me know and I’ll update this list.
+
+- Front-end web development: [Free Code Camp](http://www.freecodecamp.com/)
+- Back-end web development: [Ruby (for Rails)](http://poignant.guide/), [Python (for Django)](https://learnpythonthehardway.org/book/), [Javascript (for Node)](http://www.freecodecamp.com/), [PHP ,The Right Way](http://www.phptherightway.com/), for places where C# and Java are used more often, see Windows development and Mobile (Java) development respectively for resources.
+- Mobile development: Swift [Lynda’s Swift Essentials](https://www.lynda.com/Swift-tutorials/Swift-3-Essential-Training-Basics/517449-2.html) (Check [Flatiron school’s free Swift course](https://www.lynda.com/Swift-tutorials/Swift-3-Essential-Training-Basics/517449-2.html), [Swift Programming book](https://smile.amazon.com/Swift-Programming-Ranch-Guide-Guides/dp/013461061X/ref=sr_1_1?s=books&ie=UTF8&qid=1493732230&sr=1-1&keywords=swift+programming) or Java [Head First Java](https://smile.amazon.com/Head-First-Java-Kathy-Sierra/dp/0596009208/ref=sr_1_2?ie=UTF8&qid=1493732143&sr=8-2&keywords=java), [University of Helsinki’s MOOC](http://mooc.fi/courses/2013/programming-part-1/)
+- Data Science: R [Swirl](http://swirlstats.com/) or [Coursera's R course](https://www.coursera.org/learn/r-programming)
+
+Once you pick your language and starting point and you start learning, some things will be obvious, but others will be difficult to understand. You’re going to run into trouble and with concepts and code errors. That’s normal. We’ve all been there. Getting unstuck takes practice too.
 
 
-    p.branch = (h, xoff)=> {
-        let sw = p.map(h, 2, 100, 1, 5);
-        //let sc = map(h, 2, 100, 200, 255);
-        p.strokeWeight(sw);
-        p.line(0, 0, 0, -h);
-        p.translate(0, -h);
-        h *= 0.71;
-        xoff += 0.1;
+## How to get unstuck once you’ve started
+Once you start learning to code, you're going to run into problems that you don't know how to solve. This is normal and part of the process. You don't really learn unless you struggle through it. That said, you won't always be able to move forward without some help. So how do you find that help?
 
-        if (h > 10) {
-            let n = p.floor(p.random(0, 5));
-            for (let i = 0; i < n; i++) {
-                let theta = p.map(p.noise(xoff + i, yoff), 0, 1, -PI / 3, PI / 3);
-                if (n % 2 == 0)
-                    theta *= -1;
-                p.push();
-                p.rotate(theta);
-                p.branch(h, xoff);
-                p.pop();
-            }
-        }
-    };
-}
-const swayingTree = new p5(swaying);
+First off, forget books. They aren't a great place to start here, because the number and types of errors they can cover is so small.
 
-function ltree(p) {
-    let angle;
-    let axiom = "X";
-    let sentence = axiom;
-    let len = 150;
-
-    let width = 400;
-    let height = 400;
-    let rules = [];
-    let canvas;
-
-    rules[0] = {
-        a: 'F',
-        b: 'FF'
-    };
-
-    rules[1] = {
-        a: 'X',
-        b: 'F-[[X]+X]+F[+FX]-X'
-    };
-
-    p.generate = () => {
-        len *= 0.5;
-        let nextSentence = "";
-
-        for (let i = 0; i < sentence.length; i++) {
-            let current = sentence.charAt(i);
-            let found = false;
-            for (let j = 0; j < rules.length; j++) {
-                if (current == rules[j].a) {
-                    found = true;
-                    nextSentence += rules[j].b;
-                    break;
-                }
-            }
-            if (!found) {
-                nextSentence += current;
-            }
-        }
-        sentence = nextSentence;
-        //createP(sentence);
-        p.turtle();
-    };
-
-    p.turtle = () => {
-        p.background(51);
-        p.resetMatrix();
-        p.translate(width / 2, height);
-        p.stroke(255, 100);
-        for (let i = 0; i < sentence.length; i++) {
-            let current = sentence.charAt(i);
-
-            if (current == "F") {
-                p.line(0, 0, 0, len);
-                p.translate(0, -len);
-            } else if (current == "+") {
-                p.rotate(-angle);
-            } else if (current == "-") {
-                p.rotate(angle)
-            } else if (current == "[") {
-                p.push();
-            } else if (current == "]") {
-                p.pop();
-            }
-        }
-    }
-
-    p.setup = () => {
-        canvas = p.createCanvas(width, height);
-        canvas.parent("L1");
-        angle = p.radians(25);
-        p.background(51);
-        //createP(axiom);
-        p.turtle();
-        let button = p.createButton("generate");
-        button.position(900,2200)
-        button.mousePressed(p.generate);
-    };
-}
-
-const lsystem = new p5(ltree);
-</script>
+Online is the easiest place to find help. Most devs look for solutions on StackOverflow or just google the error message (if they have one). Other solutions are to find newsgroups or forums dedicated to the language you're using.
 
 
+#### Author
 
-{% if page.comments %}
-<div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://euler16.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-{% endif %}
+> **Mehedi Hasan** :zzz:
