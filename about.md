@@ -7,7 +7,7 @@ permalink: /about/
 ![Mehedi]({{site.baseurl}}/assets/me.png){:height="250em" style="float: left;margin-right: 20px;margin-top: 7px"}
 I am an undergraduate of the Physics department at Bangabandhu Sheikh Mujibur Rahman Science & Technology University (BSMRSTU). My interests span across Physics (specifically Mechanics, Electrodynamics), Mathematics, Anime, Photography, Literature. I founded Firewall Bangladesh, A cyber security company in 2020.
 
-I am a [Cyber Security Analyst](https://facebook.com/mehedx) at [Firewall BD](https://instagram.com/firewallbd). For more, you can find my resume [here.](mehedieh.github.io/cv)
+I am a [Cyber Security Analyst](https://facebook.com/mehedx) at [Firewall BD](https://instagram.com/firewallbd). For more, you can find my resume [here.](cv)
 
 Apart from mainstream academic work, I maintain this blog.
 
