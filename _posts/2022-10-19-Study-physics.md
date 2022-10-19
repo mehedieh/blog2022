@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to start learning to code?"
+title:  "Study Physics"
 date:   2022-10-19 01:00:00 +0530
 categories: physics
 author: "Mehedi Hasan"
