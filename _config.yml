@@ -6,20 +6,20 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Lagrangian
-subtitle: Musings of a Math addict
-email: nilayshrivastava1729@gmail.com
-description: Machine Learning, Computer Science, Quantum Computing, Mathematics
+title: Mehedi
+subtitle: a little lost but a lot found
+email: bsmrstu.mehedi@gmail.com
+description: Physics, Computer Science, Mathematics
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://euler16.github.io" # the base hostname & protocol for your site
-twitter_username: NilayShri
-github_username:  euler16
-facebook_username: nilay.shrivastava.1729
-linkedin_username: nilayshrivastava1729
+url: "http://mehedieh.github.io" # the base hostname & protocol for your site
+twitter_username: mehedx
+github_username:  mehedieh
+facebook_username: mehedx
+linkedin_username: mehedihasan1999
 paginate: 6
 
 plugins: [jekyll-paginate, kramdown, jekyll-seo-tag, jekyll-sitemap]
 # Build settings
 markdown: kramdown
 highlighter: rouge
-comments: true
+comments: false
