@@ -3,14 +3,17 @@ layout: page
 title : About
 permalink: /about/
 ---
-<h2><center>Nilay Shrivastava</center></h2>
-![Nilay]({{site.baseurl}}/assets/nilay_shrivastava.jpg){:height="250em" style="float: left;margin-right: 20px;margin-top: 7px"}
-I am a graduate of the Computer Engineering department at Netaji Subhas Institute of Technology (NSIT). My interests span across Mathematics (specifically Topology, Stochastic Calculus), Deep Learning, Gradient free Optimization algorithms and Quantum Computing/Information Processing. After graduating from NSIT, I did an internship with Adobe's Media and Data Science Research Group (based in Noida, India). My internship project was about doing generative modeling in the domain of quantum machine learning. During my undergraduate degree, I also managed to squeeze internships at a startup Zeg.ai and then at Samsung Research, Banglore where I worked on constructing Deep Nets for low power devices. I also worked at [MIDSA@IIITD](http://midas.iiitd.edu.in/) under the guidance of [Dr. Rajiv Ratn Shah](), [Dr. Debanjan Mahata (Bloomberg, NY)](https://scholar.google.com/citations?user=8F1SwO0AAAAJ&hl=en) and [Dr. Amanda Stent (Bloomberg, NY)](https://cra.org/cra-w/amanda-stent/). My work there revolved around visual speech recognition. Currently, I am a full-time employee at Adobe Systems.
+<h2><center>Mehedi Hasan Shanto</center></h2>
+![Mehedi]({{site.baseurl}}/assets/mehedi.jpg){:height="250em" style="float: left;margin-right: 20px;margin-top: 7px"}
+I am an undergraduate of the Physics department at Bangabandhu Sheikh Mujibur Rahman Science & Technology University (BSMRSTU). My interests span across Physics (specifically Mechanics, Electrodynamics), Mathematics, Anime, Photography, Literature. I founded Firewall Bangladesh, A cyber security company in 2020.
 
-I am a [KVPY](https://en.wikipedia.org/wiki/Kishore_Vaigyanik_Protsahan_Yojana) and [NTSE](https://en.wikipedia.org/wiki/National_Talent_Search_Examination) scholar too. For more, you can find my resume [here.](/assets/pdfs/NilayShrivastava.pdf)
+I am a [Cyber Security Analyst](https://facebook.com/mehedx) at [Firewall BD](https://instagram.com/firewallbd). For more, you can find my resume [here.](mehedieh.github.io/cv)
 
-Apart from mainstream academic work, I maintain this blog. I have also built a JavaScript library [Qu.js (do check it out](https://github.com/euler16/Qu.js)!).
-> What is this pendulum doing here? This interactive double pendulum simulation is based on equations derived using Lagrangian (the name of this website!!) formulation of Classical Mechanics. Finding the equations governing the motion of double pendulum system is one of the first problems used to demonstrate the ease and efficacy of this formulation over Newton's equations.
+Apart from mainstream academic work, I maintain this blog.
+
+> What is this pendulum doing here? 
+
+This interactive double pendulum simulation is based on equations derived using Lagrangian (the name of this website!!) formulation of Classical Mechanics. Finding the equations governing the motion of double pendulum system is one of the first problems used to demonstrate the ease and efficacy of this formulation over Newton's equations.
 <br>
 <center>
 <div id="canvas"></div>
@@ -221,19 +224,4 @@ function doublePendulum(p) {
 let dp = new p5(doublePendulum);
 </script>
 
-<h3>Talks</h3>
-* [__Quantum Computing for Dummies!__](https://github.com/euler16/PyData-2018) : Presented at PyData-India Conference held in Delhi-11-12th August 2018.
-* [__You Can Compress!__](https://github.com/euler16/PyData2017) : Presented as a co-speaker at PyData-India 2017. The talk was centered around popular dimensionality reduction methods used in Machine Learning.
-<h3>Projects</h3>
-* [__Qu.js__](https://github.com/euler16/Qu.js) : A JavaScript Quantum Computing framework that strives to be what Keras is for deep learning. Currently provides a local simulator, compilation to hardware specific Quantum languages (QUIL and QASM).
-* [ __CharRNN__ ](https://github.com/euler16/CharRNN) : character based language modelling written in PyTorch.
-* [ __Neural Style Transfer__ ](https://github.com/euler16/Neural-Style-Transfer) : implementation of the algorithm that is hallmark of interesection of art and AI.
-* [ __Face-Recognizer__ ](https://github.com/euler16/Face-Recognizer) : Face Recognition using Principal Component Analysis.
-<br>
-
-<h3> Research Work </h3>
-
-* Shrivastava, Nilay, et al. "MobiVSR: A Visual Speech Recognition Solution for Mobile Devices." arXiv preprint [arXiv:1905.03968 (2019)](https://arxiv.org/abs/1905.03968). Accepted for oral presentation at InterSpeech2019.
-
-* Gupta, R., Shrivastava, N., Jain, M., Singh, V. and Rani, A., 2018, April. Greedy WOA for Travelling Salesman Problem. In International Conference on Advances in Computing and Data Sciences (pp. 321-330). Springer, Singapore.
 
