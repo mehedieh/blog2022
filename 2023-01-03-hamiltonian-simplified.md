@@ -1,5 +1,14 @@
+---
+layout: post
+title:  "Hamiltonian Mechanics Simplified"
+date:   2023-01-03 10:00:00 +0530
+categories: physics
+author: "Mehedi Hasan"
+comments: true
+---
 
-Hamiltonian Mechanics Simplified
+
+## Hamiltonian Mechanics Simplified
 
 
 
