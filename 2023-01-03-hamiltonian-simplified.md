@@ -23,3 +23,21 @@ In Hamiltonian Mechanics, the motion of an object is described by a mathematical
 Hamiltonian Mechanics is a powerful tool that is used in many different fields, including astronomy, engineering, and even economics. It helps scientists and engineers understand how things move and how they can control their motion.
 
 So, to put it simply, Hamiltonian Mechanics is all about understanding the motion of objects by looking at their energy and the forces acting on them. It helps us understand the complex motion of the world around us.
+
+
+
+# Mathematical Explanation
+
+Consider a particle of mass m moving in a one-dimensional potential field V(x). The Hamiltonian for this system can be written as:
+
+$$ H = \frac{p^2}{2m} + V(x) $$
+
+where p is the momentum of the particle and x is its position.
+
+The equations of motion for this system can be derived from the Hamiltonian using Hamilton's equations:
+
+$$ \dot{x} = \frac{\partial H}{\partial p} = \frac{p}{m} $$
+
+$$ \dot{p} = -\frac{\partial H}{\partial x} = -\frac{dV}{dx} $$
+
+These equations describe how the position and momentum of the particle change over time, given its initial conditions. By solving these equations, we can determine the motion of the particle in the potential field.
